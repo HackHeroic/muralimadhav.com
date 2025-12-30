@@ -64,16 +64,16 @@ type AchievementType = {
 };
 
 export const DATA = {
-  name: "C. Murali Madhav",
+  name: "Murali ",
   initials: "MM",
   url: "https://cmuralimadhav.com",
   resumeUrl: "/C Murali Madhav Resume Latest Decemeber 2025 .pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "Building impactful solutions through code. I love using my skills to build things that actually make a difference in people's lives. Experienced in full-stack development, machine learning, and software engineering.",
+    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 17th place globally at HackMIT 2025. Experienced in full-stack development, machine learning, and deep learning.",
   current:
-    "Software Development Engineer Intern at [Transient AI Inc](https://transientai.com) and pursuing B.Tech in Computer Science & Artificial Intelligence.",
+    "B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
   summary1:
     "I love using my skills to build things that actually make a difference in people's lives. My goal is to keep exploring, innovating, and contributing to STEM in a way that helps society move forward.",
   summary2:
@@ -107,7 +107,34 @@ export const DATA = {
         "Achieved a global rank of 1305 and All-India rank of 446 in IEEE Hackathon.",
     },
   ] as HackathonType[],
-  publications: [] as PublicationType[],
+  publications: [
+    {
+      title: "Watt-IF: Electricity Data Mining and Grid Resilience Research",
+      href: "https://github.com/HackHeroic/Watt-IF/tree/main",
+      authors: ["C. Murali Madhav"],
+      venue: "Research Project (Work in Progress) - 2024",
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          title: "GitHub",
+          href: "https://github.com/HackHeroic/Watt-IF/tree/main",
+        },
+      ],
+    },
+    {
+      title: "Optiforge: Neural Options Pricing with LSTM and GARCH Volatility",
+      href: "https://github.com/HackHeroic/optiforge",
+      authors: ["C. Murali Madhav"],
+      venue: "Research Project (Work in Progress) - 2024",
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          title: "GitHub",
+          href: "https://github.com/HackHeroic/optiforge",
+        },
+      ],
+    },
+  ] as PublicationType[],
   achievements: [
     {
       title: "Runner Up - Voloridge Sponsorship Challenge",
@@ -165,13 +192,13 @@ export const DATA = {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com",
+        url: "https://github.com/HackHeroic",
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://www.linkedin.com/in/c-murali-madhav-2516602aa/",
         icon: Icons.linkedin,
         navbar: true,
       },
@@ -396,6 +423,56 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://github.com/HackHeroic/Image_to_Audio",
+        },
+      ],
+    },    
+    {
+      title: "Stock Price Prediction using LSTM",
+      href: "https://github.com/HackHeroic/Stock-Price-Predictor",
+      dates: "December 2024 - January 2025",
+      active: true,
+      description:
+        "Implemented a Long Short-Term Memory (LSTM) neural network to predict stock prices based on historical data. The model leverages time-series forecasting techniques, processes real-time stock data using yfinance, and scales data with MinMaxScaler for improved performance. It predicts the next day's stock price and visualizes results against actual market data. The architecture consists of stacked LSTM layers with dropout regularization to enhance prediction accuracy while preventing overfitting.",
+      technologies: [
+        "Python",
+        "LSTM",
+        "Deep Learning",
+        "TensorFlow",
+        "Keras",
+        "Time-Series Forecasting",
+        "Quantitative Finance",
+        "yfinance",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/Stock-Price-Predictor",
+        },
+      ],
+    },
+    {
+      title: "CIFAR-10 Image Classification using CNN",
+      href: "https://github.com/HackHeroic/Image-classification-",
+      dates: "2024",
+      active: true,
+      description:
+        "Developed a Convolutional Neural Network (CNN) to classify images from the CIFAR-10 dataset, which contains 60,000 images across 10 categories (airplanes, cars, birds, etc.). The model was trained using TensorFlow and Keras, achieving an accuracy of approximately 72%. The architecture includes 3 convolutional layers with MaxPooling for feature extraction.",
+      technologies: [
+        "Python",
+        "CNN",
+        "Deep Learning",
+        "TensorFlow",
+        "Keras",
+        "Computer Vision",
+        "OpenCV",
+        "Image Classification",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/Image-classification-",
         },
       ],
     },

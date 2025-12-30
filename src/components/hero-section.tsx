@@ -24,7 +24,7 @@ export function HeroSection() {
             </div>
           </div>
           <Avatar className="size-28 border">
-            <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
+            <AvatarImage alt={DATA.name} src={DATA.avatarUrl} className="object-cover"/>
             <AvatarFallback>{DATA.initials}</AvatarFallback>
           </Avatar>
         </div>

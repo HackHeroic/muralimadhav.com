@@ -30,9 +30,9 @@ export const metadata: Metadata = {
   },
   description: DATA.description,
   icons: {
-    icon: "/some pfp.webp",
-    shortcut: "/some pfp.webp",
-    apple: "/some pfp.webp",
+    icon: "/madhav-charles-4.jpeg",
+    shortcut: "/madhav-charles-4.jpeg",
+    apple: "/madhav-charles-4.jpeg",
   },
   openGraph: {
     title: `${DATA.name}`,
@@ -79,21 +79,21 @@ export default function RootLayout({
         {/* <!-- Primary Meta Tags --> */}
           <title>C. Murali Madhav</title>
           <meta name="title" content="C. Murali Madhav" />
-          <meta name="description" content="Building impactful solutions through code. I love using my skills to build things that actually make a difference in people's lives. Experienced in full-stack development, machine learning, and software engineering." />
+          <meta name="description" content="Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 17th place globally at HackMIT 2025. Experienced in full-stack development, machine learning, and deep learning." />
 
           {/* <!-- Open Graph / Facebook --> */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://cmuralimadhav.com/" />
           <meta property="og:title" content="C. Murali Madhav" />
-          <meta property="og:description" content="Building impactful solutions through code. I love using my skills to build things that actually make a difference in people's lives. Experienced in full-stack development, machine learning, and software engineering." />
-          <meta property="og:image" content="https://cmuralimadhav.com/banner.webp" />
+          <meta property="og:description" content="Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 17th place globally at HackMIT 2025. Experienced in full-stack development, machine learning, and deep learning." />
+          <meta property="og:image" content="https://cmuralimadhav.com/madhav-desert.jpeg" />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://cmuralimadhav.com/" />
           <meta property="twitter:title" content="C. Murali Madhav" />
-          <meta property="twitter:description" content="Building impactful solutions through code. I love using my skills to build things that actually make a difference in people's lives. Experienced in full-stack development, machine learning, and software engineering." />
-          <meta property="twitter:image" content="https://cmuralimadhav.com/banner.webp" />
+          <meta property="twitter:description" content="Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 17th place globally at HackMIT 2025. Experienced in full-stack development, machine learning, and deep learning." />
+          <meta property="twitter:image" content="https://cmuralimadhav.com/madhav-desert.jpeg" />
 
       </head>
       <body
