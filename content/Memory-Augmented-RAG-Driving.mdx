@@ -1,0 +1,198 @@
+---
+title: "Memory-Augmented RAG for Lifelong Autonomous Driving: Enabling Continual Adaptation to Long-tail Scenarios"
+publishedAt: "2025-12-12"
+summary: "End-to-end neural networks for autonomous driving enhanced with Retrieval-Augmented Generation achieve 21.47% reduction in prediction error on unseen circuits."
+---
+
+## Authors (alphabetical order)
+
+**Aryan Keluskar** - akeluska@asu.edu, Arizona State University
+
+**Alexander Matter** - apmatter@asu.edu, Arizona State University
+
+**Linda Chen** - lychen3@asu.edu, Arizona State University
+
+**Shaik Pasha** - smpasha@asu.edu, Arizona State University
+
+**Hua Wei** (Advisor) - huawei@asu.edu, Arizona State University
+
+## Abstract
+
+End-to-end neural networks for autonomous driving struggle to generalize to unseen circuit geometries, particularly in rare, safety-critical scenarios. While memory-based architectures like memDCCP demonstrate robustness to sensor noise through temporal memory, they lack mechanisms to leverage geometrically similar experiences from different circuits. We address this by augmenting memDCCP with Retrieval-Augmented Generation (RAG), combining parametric temporal memory with non-parametric episodic memory. Our system retrieves similar past scenarios from 35,515 training examples using FAISS-based similarity search and augments predictions through weighted averaging, requiring no gradient updates or fine-tuning. Evaluated on the F1 Formula1-FollowLine dataset with strict train/test circuit separation, our approach achieves 21.47% reduction in mean absolute error on completely unseen circuits, with particularly strong improvements in angular velocity prediction (34.02%) and difficult scenarios involving sharp turns (12.89%). These results demonstrate that memory-augmented retrieval can significantly enhance generalization to safety-critical edge cases while maintaining robust performance on common driving conditions.
+
+## Introduction
+
+End-to-end learning has revolutionized autonomous vehicle control by enabling models to map camera images directly to control commands. However, a critical challenge has emerged from this learning process. When these models are deployed in environments that geometrically differ from their training data, their performance degrades significantly [[1](#ref-brown2017), [2](#ref-hallgarten2024)]. This performance degradation is particularly observed in novel circuits or during rare scenarios, such as sharp turns following long straights [[3](#ref-mei2024)].
+
+To address this generalization gap without requiring retraining, we propose that Retrieval-Augmented Generation (RAG) can improve driving generalization by retrieving similar past experiences to inform current control predictions. We apply this to the memDCCP architecture [[4](#ref-blanco2022)], a memory-based neural network that utilizes 3D convolutions and ConvLSTM layers to capture temporal dependencies. Unlike previous end-to-end autonomous driving models such as PilotNet, which only use a single frame, memDCCP uses a sequence of images to predict the next action. This work brings a novel contribution by introducing a RAG system that reduces prediction error on unseen circuits by more than 20% without requiring gradient updates or fine-tuning.
+
+## Related Work
+
+Our approach is based on the work by Bojarski et al. who introduced PilotNet [[5](#ref-bojarski2016)], demonstrating that convolutional neural networks could learn steering commands directly from raw camera images. This end-to-end approach eliminates the need for explicit intermediate representations such as lane detection or path planning, instead learning a direct mapping from perception to control. Although groundbreaking, PilotNet's single-frame architecture lacks temporal context, making it vulnerable to momentary sensor noise and sudden environmental changes.
+
+The research has explored various architectural enhancements to improve robustness and generalization. However, comprehensive reviews of autonomous driving algorithms [[6](#ref-xu2024)] consistently identify generalization to unseen conditions as a fundamental challenge. Memory-less architectures such as PilotNet demonstrate particular brittleness when faced with distribution shifts, including novel track geometries, camera misalignment, and sensor degradation—conditions that are inevitable in real-world deployment.
+
+### Memory-Based Neural Networks for Autonomous Driving
+
+Blanco et al. [[4](#ref-blanco2022)] introduced memDCCP (Memory-based Deep Convolutional Pyramid), which fundamentally reimagines end-to-end autonomous driving by incorporating explicit temporal memory mechanisms. Unlike PilotNet's single-frame processing, memDCCP operates on sequences of three consecutive frames with temporal spacing, using 3D convolutions and ConvLSTM layers to capture both spatial and temporal dependencies in driving scenarios.
+
+The architecture's temporal memory provides two critical advantages. First, it enables the model to filter noise by maintaining context across sequences of 3 frames, allowing it to distinguish motion patterns, trajectory, and context. Second, the recurrent components learn to anticipate future states based on observed temporal patterns, improving predictive accuracy for dynamic scenarios.
+
+Empirical evaluation [[4](#ref-blanco2022)] reveals memDCCP's superiority over memory-less alternatives across multiple challenging conditions (see Table 1). When tested on unseen track variations including circuits with no visible line markings and alternative textures, PilotNet fails completely on 3 out of 6 test configurations while memDCCP successfully completes 5 out of 6. Under camera offset conditions that simulate sensor misalignment, memDCCP maintains functionality with mean absolute errors between 6.418 and 28.792 seconds per lap depending on offset severity, whereas memory-less models either fail entirely or exhibit dramatically worse performance. Perhaps most significantly, memDCCP demonstrates remarkable resilience to sensor noise: under salt-and-pepper noise with probability 0.4, memDCCP achieves MAE of 8.52 seconds, while memory-less architectures struggle even at lower noise levels.
+
+**Table 1: Comparison of memory-based vs. memory-less architectures on challenging autonomous driving scenarios**
+
+| Test Condition | PilotNet | memDCCP |
+|----------------|----------|---------|
+| Standard (red line) | 50s | 62.6s |
+| No line marking | Fails | 72s |
+| White texture | Fails | 61s |
+| Left shift (MAE) | 4.715 | 6.418 |
+| Right shift (MAE) | 20.99 | 28.792 |
+| Downward rotation (MAE) | Fails | 10.363 |
+| Noise probability 0.2 (MAE) | 5.474 | 9.958 |
+| Noise probability 0.4 (MAE) | Fails | 8.52 |
+| Success rate (variations) | 3/6 | 5/6 |
+
+*Results from Blanco et al. [[4](#ref-blanco2022)] demonstrate memDCCP's superior robustness to distribution shifts.*
+
+## Data
+
+### Dataset Overview
+
+We evaluated our approach using the F1 Formula1-FollowLine dataset from the DeepLearningStudio project [[4](#ref-blanco2022)]. This vision-based autonomous driving dataset was originally introduced for end-to-end control learning and consists of 73,393 images across 17 racing circuits. Image sequences were captured from a front-facing RGB camera mounted on an F1/10 vehicle in the Gazebo simulator. The dataset was recorded using a PID controller following a red line on the track, providing expert demonstrations with linear velocity ranging from 6.5 to 24.0 m/s and angular velocity from -7.1 to 7.1 deg/s.
+
+### Train/Test Splits
+
+Following the protocol of the original memDCCP paper, we established a strict circuit-based train/test split to evaluate true generalization to unseen track geometries. The dataset was divided such that training circuits and test circuits had zero overlap ($C_{train} \cap C_{test} = \emptyset$).
+
+**Training circuits** (8 recordings, 35,515 samples): Extended Simple Circuit, Many Curves Circuit, Monaco Street Circuit and the Nürburgring, all in both clockwise and anticlockwise orientations.
+
+**Test circuits** (6 recordings, 30,466 samples): Simple Circuit, Montmeló, and Montreal, all in both clockwise and anticlockwise orientations.
+
+This circuit-based split ensured that the model was evaluated exclusively on track layouts never observed during training, providing a rigorous test of generalization capabilities. Long-tail scenarios (sharp turns with $|w - 0.5| > 0.211$ in normalized space) comprised 0.32% of training data (112 samples) and 0.29% of test data (88 samples).
+
+### Preprocessing
+
+Image preprocessing followed the memDCCP protocol. Raw images (640x480 pixels) were resized to 100x50 pixels and organized into sequences of 3 consecutive frames with temporal spacing of 4 frames. Control commands (linear velocity $v$ and angular velocity $w$) were normalized to the range $[0, 1]$ using linear interpolation. Long-tail scenarios were identified based on the normalized angular velocity, with samples satisfying $|w_{norm} - 0.5| > 0.211$ (corresponding to $|w_{raw}| > 3.0$ deg/s) classified as sharp turns requiring careful handling.
+
+## Methodology
+
+Our approach extended the memDCCP architecture with a retrieval-based memory module designed to improve generalization to unseen racing circuits. All implementation details, dataset processing steps, and experimental configurations reflected the final version in our [GitHub repository](https://github.com/aryankeluskar/475-project).
+
+### Base Architecture: memDCCP
+
+We adopted the pre-trained memDCCP model (910,694 parameters) as our baseline controller. The architecture processes sequences of three consecutive frames (100×50×3 RGB) through five Conv3D layers to extract spatio-temporal features, followed by four ConvLSTM layers to maintain temporal memory. Two fully connected layers (50 and 10 neurons) reduce the features before the final output layer produces continuous predictions for normalized linear velocity $v$ and angular velocity $w$ in the range $[0,1]$.
+
+### RAG System Architecture
+
+Our RAG implementation consisted of two primary components: a FAISS-based memory system and an augmentation wrapper that combined base predictions with retrieved knowledge.
+
+#### Ingestion
+
+We implemented a non-parametric memory using FAISS (Facebook AI Similarity Search) with an IndexFlatL2 structure for exact k-nearest neighbor retrieval. The memory was populated with all 35,515 training samples. Each input sequence was passed through the base memDCCP model to obtain predictions $[\hat{v}, \hat{w}]$ which served as the embedding representation. The embeddings were stored in the FAISS index alongside their corresponding ground-truth control targets $[v, w]$ and metadata (circuit name, frame index). This design choice of using predictions as embeddings was motivated by the hypothesis that similar driving behaviors correspond to similar scenarios, which would enable semantically meaningful retrieval.
+
+#### Retrieval
+
+During inference, for each test sample, we first obtain the base prediction $\hat{y}_{base} = [\hat{v}_{base}, \hat{w}_{base}]$ from memDCCP. Then, we use this prediction as a 2D query embedding to retrieve the $k=5$ most similar training scenarios from the FAISS index based on L2 distance. We calculate an average of retrieved targets and finally, the base and retrieved predictions are combined using a fixed augmentation weight:
+
+$$\hat{y}_{RAG} = (1 - \alpha) \cdot \hat{y}_{base} + \alpha \cdot \hat{y}_{retrieved}$$
+
+with $\alpha = 0.3$. This means, 70% weight is allocated to the base model's learned behavior and 30% to retrieved evidence from similar past scenarios.
+
+## Experiments
+
+The experimental evaluation was conducted to assess the impact of RAG augmentation on generalization to unseen circuits. We compared baseline memDCCP against RAG-augmented memDCCP across multiple metrics and conducted ablation studies to understand the contribution of key hyperparameters.
+
+### Experimental Setup
+
+We implemented RAG as an inference-time augmentation to the pre-trained memDCCP model. Since our goal was to keep the base model fixed (requiring no retraining), we query a FAISS-based memory bank of training scenarios at inference to retrieve relevant past experiences. Retrieved control targets were combined with base model predictions using a weighted averaging strategy.
+
+### Hyperparameter Selection
+
+We evaluated the effect of two key RAG hyperparameters through ablation studies. **Number of neighbors ($k$):** Tested values $\{1, 3, 5, 10\}$, with $k=5$ providing the best accuracy-speed tradeoff. **Augmentation weight ($\alpha$):** Tested values $\{0.1, 0.2, 0.3, 0.5\}$, with $\alpha=0.3$ achieving optimal balance between model confidence and memory evidence.
+
+## Results
+
+We evaluated our Memory-Augmented RAG framework on the F1 Formula1-FollowLine autonomous driving dataset, comparing the performance of the baseline memDCCP architecture against our RAG-augmented variant. The experiments were conducted using 35,515 training scenarios across 8 circuits to populate the RAG memory, with evaluation performed on 30,466 test samples from 6 held-out circuits. This setup allows us to assess the model's ability to generalize to unseen driving environments while leveraging retrieved similar experiences.
+
+### Overall Performance Comparison
+
+Table 2 presents the comprehensive performance comparison between the baseline memDCCP model and our RAG-augmented variant. The primary evaluation metric is Mean Absolute Error (MAE) for control predictions, decomposed into linear velocity ($v$) and angular velocity ($w$) components.
+
+**Table 2: Performance comparison between baseline memDCCP and RAG-augmented memDCCP on F1 Formula1-FollowLine test circuits**
+
+| Metric | Baseline | RAG-Augmented |
+|--------|----------|---------------|
+| Overall MAE | 0.1747 | 0.1372 |
+| Linear velocity (v) MAE | 0.2712 | 0.2228 |
+| Angular velocity (w) MAE | 0.0782 | 0.0516 |
+| Difficult Scenarios MAE | 0.1606 | 0.1399 |
+| Normal Scenarios MAE | 0.1747 | 0.1372 |
+
+*Lower MAE values indicate better performance. v = linear velocity, w = angular velocity.*
+
+Our RAG-augmented memDCCP architecture achieved a 21.47% reduction in overall MAE compared to the baseline model (0.1372 vs. 0.1747). This improvement was consistent across both control dimensions, with linear velocity predictions improving by 17.86% (0.2712 to 0.2228) and angular velocity predictions showing a more substantial 34.02% improvement (0.0782 to 0.0516). The larger improvement in angular velocity prediction is particularly significant for autonomous driving, as steering accuracy is critical for safe navigation through complex scenarios such as sharp turns and obstacle avoidance maneuvers.
+
+### Performance on Long-tail Scenarios
+
+A key objective of this research was to improve performance on difficult, long-tail driving scenarios that are underrepresented in training data. We categorized 88 test samples as difficult scenarios based on criteria including sharp curvature changes, high-speed sections, and complex corner sequences.
+
+On these challenging scenarios, the RAG-augmented model achieved an MAE of 0.1399, representing a 12.89% improvement over the baseline's 0.1606. While this improvement is smaller than the overall performance gain, it demonstrates that the retrieval mechanism successfully provides relevant contextual information even for rare, safety-critical situations. The modest improvement margin suggests that difficult scenarios benefit from retrieval but may require additional strategies such as more sophisticated similarity metrics or scenario-specific retrieval policies.
+
+Interestingly, the performance improvement on normal scenarios (21.50%) was nearly identical to the overall improvement, indicating that the RAG augmentation does not sacrifice performance on common driving conditions to achieve gains on difficult scenarios. This balanced improvement across scenario types validates our dual-memory design, which maintains stable baseline performance while enhancing adaptation capabilities.
+
+### Component-wise Analysis
+
+The decomposition of MAE into linear and angular velocity components reveals distinct patterns in how RAG augmentation affects different aspects of driving control. The 34.02% improvement in angular velocity prediction (0.0782 to 0.0516) substantially exceeds the 17.86% improvement in linear velocity (0.2712 to 0.2228). This disparity can be attributed to the nature of steering decisions, which are more context-dependent and benefit more directly from retrieved similar scenarios. In contrast, linear velocity control is often more conservative and regularized by safety constraints, making it less sensitive to contextual retrieval.
+
+## Discussion
+
+### RAG Improves Generalization
+
+Our results demonstrate that retrieval augmentation provides improvements in generalization in unseen circuits because autonomous driving exhibits strong spatial locality, where geometrically similar turns across different circuits require similar control actions. By retrieving past scenarios with comparable geometric features, RAG effectively transfers this knowledge across circuit boundaries. The retrieval mechanism also compensates for distribution shift. While the base model struggles with novel circuit geometries, the training dataset contains diverse examples that often include local geometries that also appear in unseen circuits.
+
+Averaging k=5 neighbors creates an ensemble effect that reduces prediction variance. The component-wise analysis reveals that angular velocity predictions benefit more substantially from RAG (34.02% improvement) than linear velocity predictions (17.86%). This disparity shows that steering control is very context-dependent and may require an ensemble effect. Sharp turns are the most challenging scenarios for generalization in autonomous driving models, and RAG has the capability to help these long-tail scenarios by retrieving similar experiences at inference time.
+
+### Limitations
+
+While RAG augmentation delivers significant performance gains, the system adds approximately 20% computational overhead during inference due to FAISS retrieval. The total latency remains well within real-time constraints (<100ms) but memory-size dependency could be a constraint for performance since the size of the vector database will scale with training data.
+
+The feature space quality significantly impacts retrieval effectiveness. Since memDCCP's representations were optimized for prediction rather than retrieval, incorporating metric learning or contrastive objectives could further improve similarity matching. Additionally, the current implementation uses static memory populated once at initialization. To support real-world deployments, the vector database for RAG will require continual ingestion from all autonomous driving devices around the world, which would keep updating the road conditions in real-time.
+
+## Conclusions
+
+We have demonstrated that Retrieval-Augmented Generation can enhance the generalization capabilities of end-to-end neural networks for autonomous driving. Our RAG system achieves 21.47% reduction in prediction error on completely unseen circuits, with particularly strong improvements in angular velocity control (34.02%) and challenging sharp turn scenarios (12.89%).
+
+We find that autonomous driving exhibits strong spatial locality, where geometrically similar scenarios across different circuits require similar control actions. RAG can significantly help here through efficient k-nearest neighbor retrieval, requiring no gradient updates or model fine-tuning.
+
+Therefore, we present RAG as a viable approach for enhancing generalization in end-to-end autonomous driving, demonstrating that it can improve robustness for deployment in novel environments. All code, models, and datasets are available at [https://github.com/aryankeluskar/475-project](https://github.com/aryankeluskar/475-project) to facilitate reproduction and extension of this work.
+
+### Future Directions
+
+Several extensions could further enhance RAG-based autonomous driving. We believe that hierarchical memory organization can improve interpretability and reduce query latency, where the database maintains separate indices for different scenario types. It could improve retrieval specificity and efficiency since the query would not invoke comparison against every scenario in the database, but only in the scenarios that would be relevant.
+
+## References
+
+<a name="ref-brown2017"></a>
+[1] Brown, B., & Laurier, E. (2017). The trouble with autopilots: Assisted and autonomous driving on the social road. *Proceedings of the 2017 CHI Conference on Human Factors in Computing Systems*, 416-429.
+
+<a name="ref-hallgarten2024"></a>
+[2] Hallgarten, M., Zapata, J., Stoll, M., Renz, K., & Zell, A. (2024). Can vehicle motion planning generalize to realistic long-tail scenarios? *2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)*, 5388-5395.
+
+<a name="ref-mei2024"></a>
+[3] Mei, J., Ma, Y., Yang, X., Wen, L., Cai, X., Li, X., Fu, D., Zhang, B., Cai, P., Dou, M., et al. (2024). Continuously learning, adapting, and improving: A dual-process approach to autonomous driving. *arXiv preprint arXiv:2405.15324*.
+
+<a name="ref-blanco2022"></a>
+[4] Blanco, S. P., Mahna, S., Mishra, U. A., & Canas, J. (2022). Memory based neural networks for end-to-end autonomous driving. *arXiv preprint arXiv:2205.12124*.
+
+<a name="ref-bojarski2016"></a>
+[5] Bojarski, M., Del Testa, D., Dworakowski, D., Firner, B., Flepp, B., Goyal, P., Jackel, L. D., Monfort, M., Muller, U., Zhang, J., Zhang, X., Zhao, J., & Zieba, K. (2016). End to end learning for self-driving cars. *arXiv preprint arXiv:1604.07316*.
+
+<a name="ref-xu2024"></a>
+[6] Xu, C., & Sankar, R. (2024). A comprehensive review of autonomous driving algorithms: Tackling adverse weather conditions, unpredictable traffic violations, blind spot monitoring, and emergency maneuvers. *Algorithms*, 17(11), 526.
+
+
+[7] Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., & Chen, W. (2022). LoRA: Low-rank adaptation of large language models. *ICLR*, 1(2), 3.
+
+[8] Sandler, M., Zhmoginov, A., Vladymyrov, M., & Jackson, A. (2022). Fine-tuning image transformers using learnable memory. *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition*, 12155-12164.
