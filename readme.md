@@ -57,7 +57,7 @@ All personal data is stored in `src/data/resume.tsx`. Update the following secti
 
 ## 🌐 Live Site
 
-Visit [cmuralimadhav.com](https://cmuralimadhav.com) to see the live portfolio.
+Visit [cmuralimadhav.com](https://muralimadhav.com) to see the live portfolio.
 
 ## 📄 License
 
