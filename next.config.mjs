@@ -62,8 +62,10 @@ function getCustomRedirects() {
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: 'export',
   reactStrictMode: true,
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -73,13 +75,15 @@ const nextConfig = {
       },
     ],
   },
-  async redirects() {
-    const dubRedirects = getDubRedirects();
-    const customRedirects = getCustomRedirects();
-    
-    // Combine both types of redirects
-    return [...dubRedirects, ...customRedirects];
-  },
+  // Note: redirects() doesn't work with static export
+  // Redirects will need to be handled via Cloudflare Pages redirects or client-side
+  // async redirects() {
+  //   const dubRedirects = getDubRedirects();
+  //   const customRedirects = getCustomRedirects();
+  //   
+  //   // Combine both types of redirects
+  //   return [...dubRedirects, ...customRedirects];
+  // },
 };
 
 export default nextConfig;
