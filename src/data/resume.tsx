@@ -112,7 +112,7 @@ export const DATA = {
       title: "Watt-IF: Electricity Data Mining and Grid Resilience Research",
       href: "https://github.com/HackHeroic/Watt-IF/tree/main",
       authors: ["C. Murali Madhav"],
-      venue: "Research Project (Work in Progress) - 2024",
+      venue: "Research Project (Work in Progress) - 2025",
       links: [
         {
           icon: <Icons.github className="size-4" />,
@@ -125,7 +125,7 @@ export const DATA = {
       title: "Optiforge: Neural Options Pricing with LSTM and GARCH Volatility",
       href: "https://github.com/HackHeroic/optiforge",
       authors: ["C. Murali Madhav"],
-      venue: "Research Project (Work in Progress) - 2024",
+      venue: "Research Project (Work in Progress) - 2025",
       links: [
         {
           icon: <Icons.github className="size-4" />,
