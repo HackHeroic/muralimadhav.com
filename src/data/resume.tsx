@@ -219,7 +219,7 @@ export const DATA = {
   work: [
     {
       company: "Transient AI Inc",
-      href: "",
+      href: "https://transient.ai/",
       badges: [],
       location: "New York, USA",
       title: "Software Development Engineer – Intern",
@@ -243,7 +243,7 @@ export const DATA = {
     },
     {
       company: "Zuvees",
-      href: "",
+      href: "https://zuvees.ae/",
       badges: [],
       location: "United Arab Emirates (UAE)",
       title: "Software Development Engineer – Intern",
@@ -278,7 +278,7 @@ export const DATA = {
     },
     {
       company: "Zota Health Care Ltd",
-      href: "",
+      href: "https://www.zotahealthcare.com/",
       badges: [],
       location: "Remote",
       title: "Front-End Developer-Intern",
