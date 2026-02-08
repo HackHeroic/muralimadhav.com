@@ -5,6 +5,7 @@ import {
   HammerIcon,
   NotebookIcon,
   AwardIcon,
+  FileText,
 } from "lucide-react";
 
 type ProjectType = {
@@ -313,6 +314,34 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Floor Detection using SVM",
+      href: "https://github.com/HackHeroic/Floor_Detection_Svm",
+      dates: "2024",
+      active: true,
+      description:
+        "Implemented floor vs. non-floor pixel/region classification on indoor images using the CMM dataset and Support Vector Machines. Compared three feature-engineering approaches: RGB-only pixels, RGB plus spatial coordinates, and KMeans-based region-level features. Method 3 (KMeans regions) achieved ~92.5% test accuracy with the fastest training.",
+      technologies: [
+        "Python",
+        "SVM",
+        "scikit-learn",
+        "KMeans",
+        "Computer Vision",
+        "COCO Annotations",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/Floor_Detection_Svm",
+        },
+        {
+          icon: <FileText className="size-4" />,
+          type: "Report",
+          href: "/C Murali Madhav - Report Floor Detection fusing SVM.pdf",
+        },
+      ],
+    },
     {
       title: "Watt-IF – Electricity Data Mining and Grid Resilience Research",
       href: "https://github.com/HackHeroic/Watt-IF/tree/main",
