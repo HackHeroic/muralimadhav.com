@@ -226,7 +226,7 @@ export const DATA = {
       title: "Software Development Engineer – Intern",
       logoUrl: "/TransientAi-logo.jpeg",
       start: "June 2025",
-      end: "Present",
+      end: "September 2025",
       description: (
         <>
           Developed a{" "}
