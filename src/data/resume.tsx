@@ -505,5 +505,27 @@ export const DATA = {
         },
       ],
     },
+    {
+      title: "File Organizer App",
+      href: "https://github.com/HackHeroic/file_organizer",
+      dates: "2024",
+      active: true,
+      description:
+        "A console-based file management application in C that demonstrates OS file system concepts. Automatically organizes files into categorized folders (Documents, Images, Audio, Videos, Others) based on extensions using system calls like mkdir(2), readdir(3), rename(2), and stat(2). Includes a Next.js web app with file explorer, kernel log of OS operations, and syscall documentation.",
+      technologies: [
+        "C",
+        "Next.js",
+        "Node.js",
+        "File System APIs",
+        "Operating Systems",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/file_organizer",
+        },
+      ],
+    },
   ] as ProjectType[],
 } as const;
