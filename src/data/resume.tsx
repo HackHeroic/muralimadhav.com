@@ -68,7 +68,7 @@ export const DATA = {
   name: "Murali ",
   initials: "MM",
   url: "https://cmuralimadhav.com",
-  resumeUrl: "/C Murali Madhav Resume  january 2026 .pdf",
+  resumeUrl: "/C Murali Madhav Resume  February 2026 .pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
