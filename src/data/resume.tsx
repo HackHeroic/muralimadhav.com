@@ -83,10 +83,16 @@ export const DATA = {
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
     {
+      title: "Google Big Code Challenge",
+      dates: "2026",
+      description:
+        "Qualified through the first three rounds of the Google Big Code Challenge, progressing against a highly competitive global field.",
+    },
+    {
       title: "HackMIT 2025 (17th Place Globally 🏆)",
       image: "/hackmit.png",
       dates: "2025",
-      location: "Cambridge, MA",      
+      location: "Cambridge, MA",
       description:
         "Achieved 17th place globally in the HackMIT Puzzle Solver Contest 2025 and runner-up in the Voloridge sponsorship challenge. Built a distributed log analyzer using parallel computing.",
     },
