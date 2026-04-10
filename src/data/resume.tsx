@@ -68,7 +68,7 @@ export const DATA = {
   name: "Murali ",
   initials: "MM",
   url: "https://cmuralimadhav.com",
-  resumeUrl: "/C Murali Madhav Resume  February 2026 .pdf",
+  resumeUrl: "/C Murali Madhav Resume  April 2026 .pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
@@ -78,7 +78,7 @@ export const DATA = {
   summary1:
     "I love using my skills to build things that actually make a difference in people's lives. My goal is to keep exploring, innovating, and contributing to STEM in a way that helps society move forward.",
   summary2:
-    "I'm currently a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.81. I have achieved recognition in competitive programming, including 17th place globally in HackMIT 2025 Puzzle Solver Contest and runner-up in the Voloridge sponsorship challenge. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
+    "I'm currently a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of second year, won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System), and was selected for the UC Berkeley Global Access Program (Spring & Fall 2026). I have achieved recognition in competitive programming, including 17th place globally in HackMIT 2025 Puzzle Solver Contest and runner-up in the Voloridge sponsorship challenge. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
@@ -138,11 +138,39 @@ export const DATA = {
   ] as PublicationType[],
   achievements: [
     {
+      title: "University Topper - B.Tech (CS&AI)",
+      issuer: "Newton School of Technology, Rishihood University",
+      date: "2026",
+      description:
+        "Secured the highest academic standing for B.Tech (CS&AI) as of second year.",
+    },
+    {
+      title: "1st Place - NST Startup Foundry 2026",
+      issuer: "Newton School of Technology",
+      date: "2026",
+      description:
+        "Won 1st place for Jarvis, an AI-powered Personal Intelligence System pitched to Google Cloud and Microsoft for Startups.",
+    },
+    {
+      title: "Berkeley Global Access (BGA) Program",
+      issuer: "UC Berkeley",
+      date: "2026",
+      description:
+        "Selected for Spring 2026 and Fall 2026 semesters at UC Berkeley, advancing AI and CS studies at a world-leading institution.",
+    },
+    {
       title: "Runner Up - Voloridge Sponsorship Challenge",
       issuer: "Voloridge x HackMIT",
       date: "September 2025",
       description:
         "HackMIT 2025: Achieved 17th place globally in the HackMIT Puzzle Solver Contest 2025 and runner-up in the Voloridge sponsorship challenge.",
+    },
+    {
+      title: "Pre-Placement Offer",
+      issuer: "Zuvees",
+      date: "2025",
+      description:
+        "Secured Pre-Placement Offer through exceptional project impact and building a first-of-its-kind Delivery Slot Management System.",
     },
     {
       title: "JEE Advanced Scholar",
@@ -310,7 +338,7 @@ export const DATA = {
       start: "2023",
       end: "May 2027",
       description:
-        "CGPA: 3.81\nRelevant Coursework: Data Structures and Algorithms, Software Engineering, Operating Systems, Object-Oriented Programming, Database Management, Machine Learning, Applied Linear Algebra, Probability and Statistics, Cybersecurity, Computer Architecture, Artificial Intelligence & Machine Learning, Data Mining, Computer Networks.",
+        "CGPA: 3.74/4\nRelevant Coursework: Data Structures and Algorithms, Software Engineering, Operating Systems, Object-Oriented Programming, Database Management, Machine Learning, Applied Linear Algebra, Probability and Statistics, Cybersecurity, Computer Architecture, Artificial Intelligence & Machine Learning, Data Mining, Computer Networks, Advanced Machine Learning, Advanced Discrete Mathematics, and Deep Learning.",
     },
   ],
   projects: [
