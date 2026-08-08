@@ -47,7 +47,7 @@ export function Publications() {
         {" "}
         {/* Centered the heading block and added margin */}
         <div className="inline-block rounded-lg bg-foreground text-background px-3 py-1 text-sm">
-          Research Publications
+          Research
         </div>
       </div>
       <div className="flex w-full flex-col gap-6 md:gap-8">
@@ -76,9 +76,9 @@ export function Publications() {
             <div className="mt-2 text-sm">
               {" "}
               {/* Adjusted font size for readability */}
-              {/* <div className="text-gray-700 dark:text-gray-300">
+              <div className="text-gray-700 dark:text-gray-300">
                 <AuthorList authors={publication.authors} />
-              </div> */}
+              </div>
               {publication.contributionNote && (
                 <div className="mt-1 text-xs font-semibold">
                   {publication.contributionNote}

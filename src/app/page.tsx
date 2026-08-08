@@ -27,24 +27,6 @@ export default function Page() {
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <Hero />
       <section id="about">
-        {/* <h2 className="text-xl font-bold w-min">tldr</h2>
-        <div className="relative w-full mt-3 mb-8 lg:p-4">
-          <Image
-            src="/tldr.webp"
-            alt="tldr"
-            className="w-full h-auto dark:hidden lg:opacity-80"
-            width={1000}
-            height={1000}
-          />
-          <Image
-            src="/tldr-dark.webp"
-            alt="tldr"
-            className="w-full h-auto hidden dark:block lg:opacity-80"
-            width={1000}
-            height={1000}
-          />
-        </div> */}
-
         <h2 className="text-xl font-bold w-min">About</h2>
         <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
           {DATA.summary1}

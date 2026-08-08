@@ -68,29 +68,34 @@ export const DATA = {
   name: "Murali ",
   initials: "MM",
   url: "https://cmuralimadhav.com",
-  resumeUrl: "/C Murali Madhav Resume  April 2026 .pdf",
+  resumeUrl: "/C Murali Madhav Resume August 2026.pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 17th place globally at HackMIT 2025. Experienced in full-stack development, machine learning, and deep learning.",
+    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 8th place globally at HackMIT 2026. First-author IEEE paper accepted at APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
   current:
     "B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
   summary1:
     "I love using my skills to build things that actually make a difference in people's lives. My goal is to keep exploring, innovating, and contributing to STEM in a way that helps society move forward.",
   summary2:
-    "I'm currently a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of second year, won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System), and was selected for the UC Berkeley Global Access Program (Spring & Fall 2026). I have achieved recognition in competitive programming, including 17th place globally in HackMIT 2025 Puzzle Solver Contest and runner-up in the Voloridge sponsorship challenge. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
+    "I'm currently a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of third year and first author of KAT-PatchTST, a physics-informed forecasting paper accepted at the 18th IEEE APPEEC (Singapore, August 2026), with a provisional patent filed. I was selected for Y Combinator Startup School India 2026 and the UC Berkeley Global Access Program (Spring & Fall 2026), and won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System). In competitive programming, I placed 8th globally in the HackMIT 2026 Puzzle Solver Contest (17th in 2025, with runner-up in the Voloridge sponsorship challenge) and reached the Google Big Code 48-hour Challenge Finale as a national Top 50. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
     {
+      title: "HackMIT 2026 (8th Place Globally 🏆)",
+      dates: "2026",
+      description:
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025.",
+    },
+    {
       title: "Google Big Code Challenge",
       dates: "2026",
       description:
-        "Qualified through the first three rounds of the Google Big Code Challenge, progressing against a highly competitive global field.",
+        "Top 50 nationally in the Google Big Code Challenge; invited to the 48-hour Challenge Finale and awarded a Google Pixel device.",
     },
     {
       title: "HackMIT 2025 (17th Place Globally 🏆)",
-      image: "/hackmit.png",
       dates: "2025",
       location: "Cambridge, MA",
       description:
@@ -116,10 +121,20 @@ export const DATA = {
   ] as HackathonType[],
   publications: [
     {
-      title: "Watt-IF: Electricity Data Mining and Grid Resilience Research",
+      title:
+        "KAT-PatchTST: Physics-Informed Forecasting with Kirchhoff Conservation",
       href: "https://github.com/HackHeroic/Watt-IF/tree/main",
-      authors: ["C. Murali Madhav"],
-      venue: "Research Project (Work in Progress) - 2025",
+      authors: [
+        "C. Murali Madhav",
+        "R. Yadav",
+        "K. Mehra",
+        "A. Tewary",
+        "S. Aggarwal",
+      ],
+      venue:
+        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Accepted, to appear in IEEE Xplore",
+      contributionNote:
+        "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filed",
       links: [
         {
           icon: <Icons.github className="size-4" />,
@@ -128,27 +143,28 @@ export const DATA = {
         },
       ],
     },
-    {
-      title: "Optiforge: Neural Options Pricing with LSTM and GARCH Volatility",
-      href: "https://github.com/HackHeroic/optiforge",
-      authors: ["C. Murali Madhav"],
-      venue: "Research Project (Work in Progress) - 2025",
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          title: "GitHub",
-          href: "https://github.com/HackHeroic/optiforge",
-        },
-      ],
-    },
   ] as PublicationType[],
   achievements: [
+    {
+      title: "8th Place Globally - HackMIT 2026 Puzzle Solver Contest",
+      issuer: "HackMIT",
+      date: "2026",
+      description:
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026.",
+    },
     {
       title: "University Topper - B.Tech (CS&AI)",
       issuer: "Newton School of Technology, Rishihood University",
       date: "2026",
       description:
-        "Secured the highest academic standing for B.Tech (CS&AI) as of second year.",
+        "Secured the highest academic standing for B.Tech (CS&AI) as of third year.",
+    },
+    {
+      title: "Y Combinator Startup School India 2026",
+      issuer: "Y Combinator",
+      date: "2026",
+      description:
+        "Selected to YC's invite-only founder program in Bangalore.",
     },
     {
       title: "1st Place - NST Startup Foundry 2026",
@@ -156,6 +172,13 @@ export const DATA = {
       date: "2026",
       description:
         "Won 1st place for Jarvis, an AI-powered Personal Intelligence System pitched to Google Cloud and Microsoft for Startups.",
+    },
+    {
+      title: "Google Big Code Challenge - National Top 50 & Finale",
+      issuer: "Google",
+      date: "2026",
+      description:
+        "Top 50 nationally; invited to the 48-hour Challenge Finale and awarded a Google Pixel device.",
     },
     {
       title: "Berkeley Global Access (BGA) Program",
@@ -183,7 +206,7 @@ export const DATA = {
       issuer: "The National Testing Agency",
       date: "June 2023",
       description:
-        "Secured a rank among the State top 2 per cent of students who qualified for the next from JEE Main -2023. Was offered seat in IIT Goa CSE Branch.",
+        "Secured All-India Rank 5649 in JEE Advanced 2023. Was offered seat in IIT Goa CSE Branch.",
     },
     {
       title: "National Talent Search Examination (NTSE) Scholar",
@@ -191,6 +214,13 @@ export const DATA = {
       date: "January 2020",
       description:
         "Qualified as NTSE Scholar, recognizing exceptional academic talent and potential.",
+    },
+    {
+      title: "2nd Place - State Level Public Speaking Contest",
+      issuer: "The Hindu",
+      date: "",
+      description:
+        "Achieved second place in the State Level Public Speaking Contest organized by the daily newspaper The Hindu.",
     },
   ] as AchievementType[],
   skills: [
@@ -219,6 +249,7 @@ export const DATA = {
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "#experience", icon: BriefcaseIcon, label: "Experience" },
     { href: "#achievements", icon: AwardIcon, label: "Achievements" },
+    { href: "#publications", icon: NotebookIcon, label: "Research" },
     { href: "#projects", icon: HammerIcon, label: "Projects" },
     // { href: "/blog", icon: NotebookIcon, label: "Blog" }
   ],
@@ -263,14 +294,14 @@ export const DATA = {
       end: "September 2025",
       description: (
         <>
-          Developed a{" "}
+          Developed{" "}
           <span
             style={{
               fontWeight: "bold",
               color: "var(--python-color, #306998)",
             }}
           >
-            LSTM-based deep learning model
+            deep recurrent forecasting models
           </span>{" "}
           for stock price prediction during internal Hackathon Challenge, integrating real-time data APIs for enhanced accuracy in time-series forecasting; awarded 'Best Project' for its application in hedge fund risk analysis and revenue optimization. Collaborated on real-time insights dashboards for portfolio risk identification and market research, incorporating sentiment analysis and semantic search to support proactive strategies in investment banking and hedge funds.
         </>
@@ -305,7 +336,7 @@ export const DATA = {
           >
             Order Management System (OMS)
           </span>{" "}
-          with MERN stack and AI automation, boosting Contribution Margin by 60% and conversion rates from 45% to 140%. Designed scalable business process workflows for delivery, inventory, and order systems, integrating Shopify APIs, dynamic pricing via price slabs, and real-time slot management. Architected{" "}
+          on the MERN stack with automated order-intake and fulfilment pipelines, boosting Contribution Margin (CM1) by 60% and conversion rates from 45% to 140%. Designed scalable business process workflows for delivery, inventory, and order systems, integrating Shopify APIs, dynamic pricing via price slabs, and real-time slot management. Architected{" "}
           <span className="text-[#eb8f00] dark:text-[#ffb900]" style={{ fontWeight: "bold"}}>AWS</span>{" "}
           infrastructure (S3, RDS, EC2) and CI/CD pipelines with GitHub Actions and Docker, ensuring high availability and scalability for the Zuvees e-commerce platform.
         </>
@@ -377,19 +408,19 @@ export const DATA = {
       ],
     },
     {
-      title: "Watt-IF – Electricity Data Mining and Grid Resilience Research",
+      title: "Watt-IF – Physics-Informed Power Grid Forecasting",
       href: "https://github.com/HackHeroic/Watt-IF/tree/main",
-      dates: "2024",
+      dates: "2025 - Present",
       active: true,
       description:
-        "Conducted large-scale electricity consumption and generation mining using XGBoost, TFT, and deep learning models, achieving improved demand forecasting through advanced feature engineering. Modeled the U.S. power grid as a weighted directed graph and applied max-flow min-cut analysis to identify critical transmission bottlenecks and simulate cascading failure scenarios for Efficient Resource Allocation.",
+        "Stage 1 (KAT-PatchTST, first author, accepted at IEEE APPEEC 2026): physics-informed BA-aggregate load forecaster combining Channel-Independent PatchTST and TimeXer cross-attention with a Kirchhoff conservation regularizer and ReLoBRaLo dynamic loss balancing. Attains 3.55% demand MAPE on the six-BA EIA-930 protocol using a 168-hour context (30% shorter than the published 240-hour baseline) at ~0.6M parameters (3-10x leaner than comparators). Stage 2 (forecast-conditioned operational feasibility analysis on the BA-interchange network) and Stage 3 (learning a conditional grid-partition policy that minimizes allocation failures) are in development, targeting ICLR.",
       technologies: [
         "Python",
-        "XGBoost",
         "Deep Learning",
-        "TensorFlow",
-        "Data Mining",
-        "Graph Theory",
+        "PatchTST",
+        "TimeXer",
+        "Physics-Informed ML",
+        "Time-Series Forecasting",
       ],
       links: [
         {
@@ -449,7 +480,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Developed a neural option pricing system integrating LSTM models with GARCH Volatility, benchmarked against Black-Scholes, enabling quantitative comparison between ML based and Analytical pricing. Built an Interactive Dashboard with heatmaps, sensitivity analysis (price vs spot, volatility) and Multiple Models Trains with different features to visualize pricing behavior and model errors across market conditions.",
+        "Developed a neural option pricing system integrating deep sequence architectures with GARCH volatility, benchmarked against Black-Scholes, enabling quantitative comparison between ML based and Analytical pricing. Built an Interactive Dashboard with heatmaps, sensitivity analysis (price vs spot, volatility) and Multiple Models Trains with different features to visualize pricing behavior and model errors across market conditions.",
       technologies: [
         "Python",
         "LSTM",
@@ -472,7 +503,7 @@ export const DATA = {
       dates: "2024",
       active: true,
       description:
-        "Built an AI-powered Flask app that generates audio descriptions from images using Salesforce's BLIP image captioning model. Converts uploaded images to speech using a text-to-speech engine, making it a potential assistive tool for visually impaired users.",
+        "Built an AI-powered Flask app that generates audio descriptions from images using Salesforce's BLIP image captioning model, combined with SVM-based floor classification (RGB-only, RGB+spatial, and KMeans-region feature strategies on a self-built dataset) to enhance environmental awareness. Converts uploaded images to speech using a text-to-speech engine, making it a practical assistive tool for visually impaired users.",
       technologies: [
         "Python",
         "Flask",
