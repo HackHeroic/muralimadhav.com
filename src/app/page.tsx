@@ -3,6 +3,7 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import { AchievementRow } from "@/components/achievement-row";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -71,18 +72,18 @@ export default function Page() {
       <section id="achievements">
         <div className="flex min-h-0 flex-col gap-y-3">
           <h2 className="text-xl font-bold">Honors & Awards</h2>
-          {DATA.achievements.map((achievement) => (
-            <ResumeCard
-              key={achievement.title}
-              logoUrl=""
-              altText={achievement.issuer}
-              title={achievement.title}
-              subtitle={achievement.issuer}
-              href={achievement.href || "#"}
-              period={achievement.date}
-              description={achievement.description}
-            />
-          ))}
+          <div className="flex flex-col gap-y-3.5">
+            {DATA.achievements.map((achievement) => (
+              <AchievementRow
+                key={achievement.title}
+                title={achievement.title}
+                issuer={achievement.issuer}
+                date={achievement.date}
+                description={achievement.description}
+                href={achievement.href}
+              />
+            ))}
+          </div>
         </div>
       </section>
       <section id="skills">

@@ -139,88 +139,79 @@ export const DATA = {
   ] as PublicationType[],
   achievements: [
     {
-      title: "8th Place Globally - HackMIT 2026 Puzzle Solver Contest",
+      title: "HackMIT 2026 — 8th Globally",
       issuer: "HackMIT",
       date: "2026",
       description:
-        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026; invited to MIT, Cambridge, USA in October 2026.",
+        "Puzzle Solver Contest · invited to MIT, Cambridge in October 2026",
     },
     {
-      title: "Top 5 & 3rd Place - IEEE PES Energy Shark Tank 2026",
-      issuer: "IEEE PES Young Professionals · 18th APPEEC, Singapore",
+      title: "IEEE PES Energy Shark Tank 2026 — Top 5 & 3rd Place",
+      issuer: "IEEE PES Young Professionals · APPEEC Singapore",
       date: "August 2026",
-      description:
-        "Startup pitch FlexGrid selected among the Top 5 pitches in the IEEE PES Young Professionals Industry Innovation Session; awarded a Certificate of Achievement for the most outstanding innovative solution and placed 3rd on the final leaderboard.",
+      description: "FlexGrid pitch · Certificate of Achievement",
     },
     {
-      title: "University Topper - B.Tech (CS&AI)",
+      title: "University Topper — B.Tech (CS&AI)",
       issuer: "Newton School of Technology, Rishihood University",
       date: "2026",
-      description:
-        "Secured the highest academic standing for B.Tech (CS&AI) as of third year.",
+      description: "Rank 1 in cohort as of third year",
     },
     {
       title: "Y Combinator Startup School India 2026",
       issuer: "Y Combinator",
       date: "2026",
-      description:
-        "Selected to YC's invite-only founder program in Bangalore.",
+      description: "Invite-only founder program, Bangalore",
     },
     {
-      title: "1st Place - NST Startup Foundry 2026",
-      issuer: "Newton School of Technology",
+      title: "1st Place — NST Startup Foundry 2026",
+      issuer: "",
       date: "2026",
       description:
-        "Won 1st place for Jarvis, an AI-powered Personal Intelligence System pitched to Google Cloud and Microsoft for Startups.",
+        "Jarvis, an AI Personal Intelligence System · pitched to Google Cloud & Microsoft for Startups",
     },
     {
-      title: "Google Big Code Challenge - National Top 50 & Finale",
+      title: "Google Big Code Challenge — National Top 50",
       issuer: "Google",
       date: "2026",
-      description:
-        "Top 50 nationally; invited to the 48-hour Challenge Finale and awarded a Google Pixel device.",
+      description: "48-hour Challenge Finale · awarded a Google Pixel",
     },
     {
-      title: "Berkeley Global Access (BGA) Program",
+      title: "Berkeley Global Access Program",
       issuer: "UC Berkeley",
       date: "2026",
-      description:
-        "Selected for Spring 2026 and Fall 2026 semesters at UC Berkeley, advancing AI and CS studies at a world-leading institution.",
+      description: "Selected for the Spring 2026 and Fall 2026 semesters",
     },
     {
-      title: "Runner Up - Voloridge Sponsorship Challenge",
-      issuer: "Voloridge x HackMIT",
+      title: "Runner-Up — Voloridge Sponsorship Challenge",
+      issuer: "Voloridge × HackMIT",
       date: "September 2025",
-      description:
-        "HackMIT 2025: Achieved 17th place globally in the HackMIT Puzzle Solver Contest 2025 and runner-up in the Voloridge sponsorship challenge.",
+      description: "HackMIT 2025 · 17th globally in the Puzzle Solver Contest",
     },
     {
       title: "Pre-Placement Offer",
       issuer: "Zuvees",
       date: "2025",
       description:
-        "Secured Pre-Placement Offer through exceptional project impact and building a first-of-its-kind Delivery Slot Management System.",
+        "Built a first-of-its-kind Delivery Slot Management System",
     },
     {
-      title: "JEE Advanced Scholar",
-      issuer: "The National Testing Agency",
+      title: "JEE Advanced 2023 — All India Rank 5649",
+      issuer: "National Testing Agency",
       date: "June 2023",
-      description:
-        "Secured All-India Rank 5649 in JEE Advanced 2023. Was offered seat in IIT Goa CSE Branch.",
+      description: "Offered a CSE seat at IIT Goa",
     },
     {
-      title: "National Talent Search Examination (NTSE) Scholar",
+      title: "NTSE Scholar",
       issuer: "NCERT",
       date: "January 2020",
-      description:
-        "Qualified as NTSE Scholar, recognizing exceptional academic talent and potential.",
+      description: "National Talent Search Examination",
     },
     {
-      title: "2nd Place - State Level Public Speaking Contest",
+      title: "2nd Place — State-Level Public Speaking Contest",
       issuer: "The Hindu",
       date: "",
-      description:
-        "Achieved second place in the State Level Public Speaking Contest organized by the daily newspaper The Hindu.",
+      description: "",
     },
   ] as AchievementType[],
   skills: [
