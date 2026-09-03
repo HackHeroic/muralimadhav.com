@@ -78,7 +78,7 @@ export const DATA = {
   summary1:
     "I build for systems that don’t forgive mistakes: power grids, warehouses, and my own calendar.",
   summary2:
-    "Third-year CS & AI student at Newton School of Technology, first in my cohort. Most of my research is the work of convincing a neural network that electricity still has to obey Kirchhoff’s laws — it kept trying not to. That one’s in IEEE Xplore now.\n\nBefore it, I built the warehouse and order systems for a Dubai e-commerce startup, where I learned that most “AI problems” are a spreadsheet in a trench coat. Contribution margin went up 60% anyway.\n\nI’ve also twice spent three weeks on a puzzle contest purely for the privilege of attending HackMIT — 17th in the world, then 8th, which I choose to read as improvement rather than a warning sign.\n\nThe list below is longer than this paragraph. That’s sort of the point.",
+    "Third-year CS & AI student, first in my cohort. Make of that what you will.\n\nTaught a neural network that electricity has to obey Kirchhoff’s laws. It refused. IEEE published us anyway.\n\nWrote the warehouse software for a Dubai startup in my second year, where I learned that most “AI problems” are a spreadsheet in a trench coat.\n\nSpent six weeks of my life on puzzle contests to get into one conference. 17th in the world, then 8th. Growth.\n\nThe list below is longer than this paragraph. No notes.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
