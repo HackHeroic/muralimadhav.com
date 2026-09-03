@@ -14,12 +14,7 @@ export function HeroSection() {
             </h1>
             <div className="max-w-[600px] md:text-xl">
               <Markdown className="prose max-w-full w-fit text-pretty font-sans dark:prose-invert bg-[rgba(255,255,255,0.33)] dark:bg-black mb-4">
-                {DATA.description}
-              </Markdown>
-            </div>
-            <div className="max-w-[600px] md:text-xl">
-              <Markdown className="prose max-w-full text-pretty font-sans dark:prose-invert">
-                {DATA.current}
+                {DATA.tagline}
               </Markdown>
             </div>
           </div>

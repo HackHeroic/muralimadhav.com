@@ -29,11 +29,8 @@ export default function Page() {
       <Hero />
       <section id="about">
         <h2 className="text-xl font-bold w-min">About</h2>
-        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mb-4 mt-2">
-          {DATA.summary1}
-        </Markdown>
-        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] text-pretty font-sans text-sm text-muted-foreground dark:prose-invert">
-          {DATA.summary2}
+        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mt-2">
+          {DATA.summary}
         </Markdown>
       </section>
       <section id="experience">

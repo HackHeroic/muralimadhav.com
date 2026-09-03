@@ -72,13 +72,11 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. AI Engineer intern offer from Sanas. 8th place globally at HackMIT 2026. First-author IEEE paper published at IEEE APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
-  current:
-    "AI Engineer intern offer @ Sanas | B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
-  summary1:
-    "i build for systems that break expensively: power grids, warehouses, and jarvis, the personal intelligence system i built that now judges my sleep schedule.",
-  summary2:
-    "fourth year cs & ai, rank 1 in my cohort. i mention this unprompted.\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. it refused. ieee published us anyway.\n\nwrote warehouse software for a dubai startup in my second year and learned that most “ai problems” are one spreadsheet in a trench coat.\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, then 8th. i am not well but i am improving.\n\nanyway. scroll.",
+    "Building AI-powered systems and shipping them. AI Engineer intern offer from Sanas, 8th globally at HackMIT 2026, first-author IEEE paper published at IEEE APPEEC 2026. Full-stack development, machine learning, and deep learning.",
+  tagline:
+    "i build for systems that break expensively. power grids, warehouses, and jarvis, who judges my sleep schedule.",
+  summary:
+    "fourth year cs & ai, rank 1 in my cohort. i mention this unprompted.\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. it refused. ieee published us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin up 60%. they raised a series a. i was, functionally, moving boxes around in a database.\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, then 8th. something is wrong with me :)\n\nanyway. scroll.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
