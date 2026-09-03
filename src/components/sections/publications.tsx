@@ -62,14 +62,18 @@ export function Publications() {
             {/* Centered content and added max-width */}
             <div>
               <h3 className="text-lg font-semibold leading-tight">
-                <a
-                  className="hover:underline"
-                  href={publication.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {publication.title}
-                </a>
+                {publication.href ? (
+                  <a
+                    className="hover:underline"
+                    href={publication.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {publication.title}
+                  </a>
+                ) : (
+                  publication.title
+                )}
               </h3>
               {/* Image rendering removed */}
             </div>

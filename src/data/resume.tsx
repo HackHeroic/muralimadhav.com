@@ -67,18 +67,18 @@ type AchievementType = {
 export const DATA = {
   name: "Murali ",
   initials: "MM",
-  url: "https://cmuralimadhav.com",
-  resumeUrl: "/C Murali Madhav Resume August 2026.pdf",
+  url: "https://muralimadhav.com",
+  resumeUrl: "/C Murali Madhav Resume September 2026.pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. 8th place globally at HackMIT 2026. First-author IEEE paper accepted at APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
+    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. AI Engineer Intern at Sanas. 8th place globally at HackMIT 2026. First-author IEEE paper published at IEEE APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
   current:
-    "B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
+    "AI Engineer Intern @ Sanas | B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
   summary1:
     "I love using my skills to build things that actually make a difference in people's lives. My goal is to keep exploring, innovating, and contributing to STEM in a way that helps society move forward.",
   summary2:
-    "I'm currently a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of third year and first author of KAT-PatchTST, a physics-informed forecasting paper accepted at the 18th IEEE APPEEC (Singapore, August 2026), with a provisional patent filed. I was selected for Y Combinator Startup School India 2026 and the UC Berkeley Global Access Program (Spring & Fall 2026), and won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System). In competitive programming, I placed 8th globally in the HackMIT 2026 Puzzle Solver Contest (17th in 2025, with runner-up in the Voloridge sponsorship challenge) and reached the Google Big Code 48-hour Challenge Finale as a national Top 50. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
+    "I'm currently an AI Engineer Intern at Sanas, working on their real-time speech AI platform, and a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of third year and first author of KAT-PatchTST, a physics-informed forecasting paper published at the 18th IEEE APPEEC (Singapore, August 2026) in IEEE Xplore, with a provisional patent filed. At the same conference, my startup pitch FlexGrid placed in the Top 5 of the IEEE PES Energy Shark Tank 2026 and finished 3rd on the final leaderboard. I was selected for Y Combinator Startup School India 2026 and the UC Berkeley Global Access Program (Spring & Fall 2026), and won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System). In competitive programming, I placed 8th globally in the HackMIT 2026 Puzzle Solver Contest (17th in 2025, with runner-up in the Voloridge sponsorship challenge) and reached the Google Big Code 48-hour Challenge Finale as a national Top 50. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
@@ -86,7 +86,7 @@ export const DATA = {
       title: "HackMIT 2026 (8th Place Globally 🏆)",
       dates: "2026",
       description:
-        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025.",
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025; invited to MIT, Cambridge, USA in October 2026.",
     },
     {
       title: "Google Big Code Challenge",
@@ -123,7 +123,7 @@ export const DATA = {
     {
       title:
         "KAT-PatchTST: Physics-Informed Forecasting with Kirchhoff Conservation",
-      href: "https://github.com/HackHeroic/Watt-IF/tree/main",
+      href: "",
       authors: [
         "C. Murali Madhav",
         "R. Yadav",
@@ -132,16 +132,9 @@ export const DATA = {
         "S. Aggarwal",
       ],
       venue:
-        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Accepted, to appear in IEEE Xplore",
+        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Published in IEEE Xplore",
       contributionNote:
         "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filed",
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          title: "GitHub",
-          href: "https://github.com/HackHeroic/Watt-IF/tree/main",
-        },
-      ],
     },
   ] as PublicationType[],
   achievements: [
@@ -150,7 +143,14 @@ export const DATA = {
       issuer: "HackMIT",
       date: "2026",
       description:
-        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026.",
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026; invited to MIT, Cambridge, USA in October 2026.",
+    },
+    {
+      title: "Top 5 & 3rd Place - IEEE PES Energy Shark Tank 2026",
+      issuer: "IEEE PES Young Professionals · 18th APPEEC, Singapore",
+      date: "August 2026",
+      description:
+        "Startup pitch FlexGrid selected among the Top 5 pitches in the IEEE PES Young Professionals Industry Innovation Session; awarded a Certificate of Achievement for the most outstanding innovative solution and placed 3rd on the final leaderboard.",
     },
     {
       title: "University Topper - B.Tech (CS&AI)",
@@ -284,6 +284,30 @@ export const DATA = {
   },
   work: [
     {
+      company: "Sanas",
+      href: "https://www.sanas.ai/",
+      badges: [],
+      location: "Bengaluru, India",
+      title: "AI Engineer \u2013 Intern",
+      logoUrl: "/Sanas-logo.png",
+      start: "June 2026",
+      end: "Present",
+      description: (
+        <>
+          Contributing to Sanas&apos;s{" "}
+          <span
+            style={{
+              fontWeight: "bold",
+              color: "var(--python-color, #306998)",
+            }}
+          >
+            real-time speech AI platform
+          </span>
+          , which transforms speakers&apos; accents in real time. Designing and building internal workflow automation across engineering and operations processes, reducing manual overhead and standardizing repeatable tasks.
+        </>
+      ),
+    },
+    {
       company: "Transient AI Inc",
       href: "https://transient.ai/",
       badges: [],
@@ -409,7 +433,7 @@ export const DATA = {
     },
     {
       title: "Watt-IF – Physics-Informed Power Grid Forecasting",
-      href: "https://github.com/HackHeroic/Watt-IF/tree/main",
+      href: "",
       dates: "2025 - Present",
       active: true,
       description:
@@ -422,17 +446,10 @@ export const DATA = {
         "Physics-Informed ML",
         "Time-Series Forecasting",
       ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://github.com/HackHeroic/Watt-IF/tree/main",
-        },
-      ],
     },
     {
       title: "Distributed Log Analyzer using Parallel Computing",
-      href: "https://github.com",
+      href: "",
       dates: "2025",
       active: true,
       description:
@@ -443,13 +460,6 @@ export const DATA = {
         "Parallel Computing",
         "Distributed Systems",
         "Log Analysis",
-      ],
-      links: [
-        {
-          icon: <Icons.github className="size-4" />,
-          type: "GitHub",
-          href: "https://github.com",
-        },
       ],
     },
     {
