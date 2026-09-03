@@ -76,9 +76,9 @@ export const DATA = {
   current:
     "AI Engineer intern offer @ Sanas | B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
   summary1:
-    "I build for systems that don’t forgive mistakes: power grids, warehouses, and Jarvis — the personal intelligence system I built, which has never once forgiven mine.",
+    "i build for systems that break expensively: power grids, warehouses, and jarvis, the personal intelligence system i built that now judges my sleep schedule.",
   summary2:
-    "Fourth-year CS & AI student, first in my cohort. Make of that what you will.\n\nTaught a neural network that electricity has to obey Kirchhoff’s laws. It refused. IEEE published us anyway.\n\nWrote the warehouse software for a Dubai startup in my second year, where I learned that most “AI problems” are a spreadsheet in a trench coat.\n\nSpent three weeks solving puzzles to get into a hackathon. Did it again the next year. 17th in the world, then 8th. Growth.\n\nThe rest is below. Jarvis already cleared your afternoon.",
+    "fourth year cs & ai, rank 1 in my cohort. i mention this unprompted.\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. it refused. ieee published us anyway.\n\nwrote warehouse software for a dubai startup in my second year and learned that most “ai problems” are one spreadsheet in a trench coat.\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, then 8th. i am not well but i am improving.\n\nanyway. scroll.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
