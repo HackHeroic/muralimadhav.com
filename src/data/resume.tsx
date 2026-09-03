@@ -78,7 +78,7 @@ export const DATA = {
   summary1:
     "I build for systems that don’t forgive mistakes: power grids, warehouses, and my own calendar.",
   summary2:
-    "Third-year CS & AI student, first in my cohort. Make of that what you will.\n\nTaught a neural network that electricity has to obey Kirchhoff’s laws. It refused. IEEE published us anyway.\n\nWrote the warehouse software for a Dubai startup in my second year, where I learned that most “AI problems” are a spreadsheet in a trench coat.\n\nSpent six weeks of my life on puzzle contests to get into one conference. 17th in the world, then 8th. Growth.\n\nThe list below is longer than this paragraph. No notes.",
+    "Fourth-year CS & AI student, first in my cohort. Make of that what you will.\n\nTaught a neural network that electricity has to obey Kirchhoff’s laws. It refused. IEEE published us anyway.\n\nWrote the warehouse software for a Dubai startup in my second year, where I learned that most “AI problems” are a spreadsheet in a trench coat.\n\nSpent three weeks solving puzzles to get into a hackathon. Did it again the next year. 17th in the world, then 8th. Growth.\n\nThe rest is below. You have time — I checked.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
