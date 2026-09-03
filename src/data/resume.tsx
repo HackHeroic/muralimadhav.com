@@ -72,13 +72,13 @@ export const DATA = {
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
-    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. AI Engineer Intern at Sanas. 8th place globally at HackMIT 2026. First-author IEEE paper published at IEEE APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
+    "Building AI-powered solutions and scalable systems. I love to learn, create, and ship. AI Engineer intern offer from Sanas. 8th place globally at HackMIT 2026. First-author IEEE paper published at IEEE APPEEC 2026. Experienced in full-stack development, machine learning, and deep learning.",
   current:
-    "AI Engineer Intern @ Sanas | B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
+    "AI Engineer intern offer @ Sanas | B.Tech CS & AI @ Newton School of Technology | Exploring AI, competitive programming, and building impactful projects.",
   summary1:
     "I love using my skills to build things that actually make a difference in people's lives. My goal is to keep exploring, innovating, and contributing to STEM in a way that helps society move forward.",
   summary2:
-    "I'm currently an AI Engineer Intern at Sanas, working on their real-time speech AI platform, and a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74. I'm the University Topper for B.Tech (CS&AI) as of third year and first author of KAT-PatchTST, a physics-informed forecasting paper published at the 18th IEEE APPEEC (Singapore, August 2026) in IEEE Xplore, with a provisional patent filed. At the same conference, my startup pitch FlexGrid placed in the Top 5 of the IEEE PES Energy Shark Tank 2026 and finished 3rd on the final leaderboard. I was selected for Y Combinator Startup School India 2026 and the UC Berkeley Global Access Program (Spring & Fall 2026), and won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System). In competitive programming, I placed 8th globally in the HackMIT 2026 Puzzle Solver Contest (17th in 2025, with runner-up in the Voloridge sponsorship challenge) and reached the Google Big Code 48-hour Challenge Finale as a national Top 50. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
+    "I'm a computer science and artificial intelligence student at Newton School Of Technology, Rishihood University, with a CGPA of 3.74, and I hold an AI Engineer intern offer from Sanas, where I began work on their real-time speech AI platform. I'm the University Topper for B.Tech (CS&AI) as of third year and first author of KAT-PatchTST, a physics-informed forecasting paper published at the 18th IEEE APPEEC (Singapore, August 2026) in IEEE Xplore, with a provisional patent filed. At the same conference, my startup pitch FlexGrid placed in the Top 5 of the IEEE PES Energy Shark Tank 2026 and finished 3rd on the final leaderboard. I was selected for Y Combinator Startup School India 2026 and the UC Berkeley Global Access Program (Spring & Fall 2026), and won 1st place at NST Startup Foundry 2026 for Jarvis (an AI-powered Personal Intelligence System). In competitive programming, I placed 8th globally in the HackMIT 2026 Puzzle Solver Contest (17th in 2025, with runner-up in the Voloridge sponsorship challenge) and reached the Google Big Code 48-hour Challenge Finale as a national Top 50. I've also secured a Pre-Placement Offer through exceptional project impact at Zuvees.",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-desert.jpeg",
   hackathons: [
@@ -277,15 +277,15 @@ export const DATA = {
     {
       company: "Sanas",
       href: "https://www.sanas.ai/",
-      badges: [],
+      badges: ["Offer received"],
       location: "Bengaluru, India",
-      title: "AI Engineer \u2013 Intern",
+      title: "AI Engineer – Intern",
       logoUrl: "/Sanas-logo.png",
       start: "June 2026",
-      end: "Present",
+      end: "",
       description: (
         <>
-          Contributing to Sanas&apos;s{" "}
+          Began contributing to Sanas&apos;s{" "}
           <span
             style={{
               fontWeight: "bold",
@@ -294,7 +294,7 @@ export const DATA = {
           >
             real-time speech AI platform
           </span>
-          , which transforms speakers&apos; accents in real time. Designing and building internal workflow automation across engineering and operations processes, reducing manual overhead and standardizing repeatable tasks.
+          , which transforms speakers&apos; accents in real time. May continue from October 2026, designing and building internal workflow automation across engineering and operations processes, reducing manual overhead and standardizing repeatable tasks.
         </>
       ),
     },

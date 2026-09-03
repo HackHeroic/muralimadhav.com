@@ -47,7 +47,8 @@ export default function Page() {
               title={work.company}
               subtitle={work.title}
               href={work.href}
-              period={`${work.start} - ${work.end ?? "Present"}`}
+              badges={work.badges}
+              period={work.end ? `${work.start} - ${work.end}` : work.start}
               description={work.description}
             />
           ))}
