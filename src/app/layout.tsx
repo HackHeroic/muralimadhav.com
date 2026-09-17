@@ -80,14 +80,14 @@ export default function RootLayout({
           <meta property="og:url" content="https://muralimadhav.com/" />
           <meta property="og:title" content="C. Murali Madhav" />
           <meta property="og:description" content="Building AI-powered systems and shipping them. AI Engineer intern offer from Sanas, 8th globally at HackMIT 2026, first-author IEEE paper published at IEEE APPEEC 2026. Full-stack development, machine learning, and deep learning." />
-          <meta property="og:image" content="https://muralimadhav.com/madhav-desert.jpeg" />
+          <meta property="og:image" content="https://muralimadhav.com/madhav-singapore.jpeg" />
 
           {/* <!-- Twitter --> */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://muralimadhav.com/" />
           <meta property="twitter:title" content="C. Murali Madhav" />
           <meta property="twitter:description" content="Building AI-powered systems and shipping them. AI Engineer intern offer from Sanas, 8th globally at HackMIT 2026, first-author IEEE paper published at IEEE APPEEC 2026. Full-stack development, machine learning, and deep learning." />
-          <meta property="twitter:image" content="https://muralimadhav.com/madhav-desert.jpeg" />
+          <meta property="twitter:image" content="https://muralimadhav.com/madhav-singapore.jpeg" />
 
       </head>
       <body

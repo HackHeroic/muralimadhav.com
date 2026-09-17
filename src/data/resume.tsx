@@ -78,7 +78,7 @@ export const DATA = {
   summary:
     "fourth year cs & ai, rank 1 in my cohort. i mention this unprompted.\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. it refused. ieee published us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin up 60%. they raised a series a. i was, functionally, moving boxes around in a database.\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, then 8th. something is wrong with me :)\n\nanyway. scroll.",
   // avatarUrl: "/professional.webp",
-  avatarUrl: "/madhav-desert.jpeg",
+  avatarUrl: "/madhav-singapore.jpeg",
   hackathons: [
     {
       title: "HackMIT 2026 (8th Place Globally 🏆)",
