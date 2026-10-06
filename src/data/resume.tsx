@@ -6,6 +6,7 @@ import {
   NotebookIcon,
   AwardIcon,
   FileText,
+  Globe,
 } from "lucide-react";
 
 type ProjectType = {
@@ -68,7 +69,7 @@ export const DATA = {
   name: "Murali ",
   initials: "MM",
   url: "https://muralimadhav.com",
-  resumeUrl: "/C Murali Madhav Resume September 2026.pdf",
+  resumeUrl: "/C Murali Madhav Resume October 2026.pdf",
   location: "India",
   locationLink: "https://www.google.com/maps/place/india",
   description:
@@ -82,9 +83,22 @@ export const DATA = {
   hackathons: [
     {
       title: "HackMIT 2026 (8th Place Globally 🏆)",
-      dates: "2026",
+      dates: "September 2026",
+      location: "Cambridge, MA",
       description:
-        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025; invited to MIT, Cambridge, USA in October 2026.",
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025. At MIT, built Unwrap with a four-person team (MIT, Oxford, Vanderbilt, NST) for the Meta and Visa challenges; shortlisted in the top 25 of ~200 teams in the first judging round.",
+      links: [
+        {
+          title: "Code",
+          icon: <Icons.github className="h-4 w-4" />,
+          href: "https://github.com/Kristina-Sakayeva/hack_mit_26",
+        },
+        {
+          title: "Live demo",
+          icon: <Globe className="h-4 w-4" />,
+          href: "https://hack-mit-26.vercel.app/",
+        },
+      ],
     },
     {
       title: "Google Big Code Challenge",
@@ -139,9 +153,9 @@ export const DATA = {
     {
       title: "HackMIT 2026 — 8th Globally",
       issuer: "HackMIT",
-      date: "2026",
+      date: "September 2026",
       description:
-        "Puzzle Solver Contest · invited to MIT, Cambridge in October 2026",
+        "Puzzle Solver Contest · built Unwrap at MIT; top 25 of ~200 teams in first-round judging",
     },
     {
       title: "IEEE PES Energy Shark Tank 2026 — Top 5 & 3rd Place",
@@ -392,6 +406,35 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Unwrap – Spotify Wrapped for Your Friends' Shopping (HackMIT 2026)",
+      href: "https://hack-mit-26.vercel.app/",
+      dates: "September 2026",
+      active: true,
+      description:
+        "A private monthly recap for a friend group that turns their saves into a six-card Wrapped and makes picking a gift easier. Built at MIT with a four-person team; I worked on the Fastify + TypeScript backend over Supabase. Taste match scores every pair of friends with cosines over taste vectors, price-band and weekday histograms, so the numbers are computed and Claude only writes the words around them. Gift picks come from embedding search over a product catalogue, and every pick must cite items the recipient actually saved. Group gifts run through Visa Direct (pull, push, reverse) live in the Visa sandbox with message-level encryption, plus a Manifest V3 Chrome extension that saves any product page. Entered the Meta and Visa challenges; top 25 of ~200 teams in first-round judging.",
+      technologies: [
+        "TypeScript",
+        "Fastify",
+        "Next.js",
+        "Supabase",
+        "Claude API",
+        "Visa Direct",
+        "Chrome Extension",
+      ],
+      links: [
+        {
+          icon: <Globe className="size-4" />,
+          type: "Website",
+          href: "https://hack-mit-26.vercel.app/",
+        },
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/Kristina-Sakayeva/hack_mit_26",
+        },
+      ],
+    },
     {
       title: "Floor Detection using SVM",
       href: "https://github.com/HackHeroic/Floor_Detection_Svm",
