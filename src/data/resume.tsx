@@ -86,7 +86,7 @@ export const DATA = {
       dates: "September 2026",
       location: "Cambridge, MA",
       description:
-        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025. At MIT, built Unwrap with a four-person team (MIT, Oxford, Vanderbilt, NST) for the Meta and Visa challenges; shortlisted in the top 25 of ~200 teams in the first judging round.",
+        "Achieved 8th place globally in the HackMIT Puzzle Solver Contest 2026, improving on 17th place in 2025. Participated in the Meta and Visa sponsor challenges at MIT with Unwrap, built with a four-person team (MIT, Oxford, Vanderbilt, NST); shortlisted among 25 of 200 teams in the first round.",
       links: [
         {
           title: "Code",
@@ -155,7 +155,7 @@ export const DATA = {
       issuer: "HackMIT",
       date: "September 2026",
       description:
-        "Puzzle Solver Contest · built Unwrap at MIT; top 25 of ~200 teams in first-round judging",
+        "Puzzle Solver Contest · Meta & Visa challenges at MIT, shortlisted among 25 of 200 teams in the first round",
     },
     {
       title: "IEEE PES Energy Shark Tank 2026 — Top 5 & 3rd Place",
@@ -412,7 +412,7 @@ export const DATA = {
       dates: "September 2026",
       active: true,
       description:
-        "Spotify Wrapped for your friends' shopping, built at HackMIT 2026 with a four-person team; I co-built the Fastify + TypeScript backend. Taste match is computed from real purchases, Claude picks gifts that cite items the recipient saved, and Visa Direct splits the payment. Top 25 of ~200 teams in first-round judging for the Meta and Visa challenges.",
+        "Spotify Wrapped for your friends' shopping, built at HackMIT 2026 with a four-person team; I co-built the Fastify + TypeScript backend. Taste match is computed from real purchases, Claude picks gifts that cite items the recipient saved, and Visa Direct splits the payment. Shortlisted among 25 of 200 teams in the first round of the Meta and Visa challenges.",
       technologies: [
         "TypeScript",
         "Fastify",
