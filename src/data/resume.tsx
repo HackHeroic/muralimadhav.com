@@ -407,12 +407,12 @@ export const DATA = {
   ],
   projects: [
     {
-      title: "Unwrap – Spotify Wrapped for Your Friends' Shopping (HackMIT 2026)",
+      title: "Unwrap",
       href: "https://hack-mit-26.vercel.app/",
       dates: "September 2026",
       active: true,
       description:
-        "A private monthly recap for a friend group that turns their saves into a six-card Wrapped and makes picking a gift easier. Built at MIT with a four-person team; I worked on the Fastify + TypeScript backend over Supabase. Taste match scores every pair of friends with cosines over taste vectors, price-band and weekday histograms, so the numbers are computed and Claude only writes the words around them. Gift picks come from embedding search over a product catalogue, and every pick must cite items the recipient actually saved. Group gifts run through Visa Direct (pull, push, reverse) live in the Visa sandbox with message-level encryption, plus a Manifest V3 Chrome extension that saves any product page. Entered the Meta and Visa challenges; top 25 of ~200 teams in first-round judging.",
+        "Spotify Wrapped for your friends' shopping, built at HackMIT 2026 with a four-person team; I co-built the Fastify + TypeScript backend. Taste match is computed from real purchases, Claude picks gifts that cite items the recipient saved, and Visa Direct splits the payment. Top 25 of ~200 teams in first-round judging for the Meta and Visa challenges.",
       technologies: [
         "TypeScript",
         "Fastify",
