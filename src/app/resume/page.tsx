@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-const RESUME_URL = '/C Murali Madhav Resume October 2026.pdf';
+const RESUME_URL = '/C Murali Madhav Resume October 2026.pdf?v=2';
 
 export default function ResumePage() {
   useEffect(() => {
