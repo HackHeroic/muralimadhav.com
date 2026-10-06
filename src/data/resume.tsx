@@ -464,12 +464,12 @@ export const DATA = {
       ],
     },
     {
-      title: "Watt-IF – Physics-Informed Power Grid Forecasting",
+      title: "Watt-IF",
       href: "",
       dates: "2025 - Present",
       active: true,
       description:
-        "Stage 1 (KAT-PatchTST, first author, accepted at IEEE APPEEC 2026): physics-informed BA-aggregate load forecaster combining Channel-Independent PatchTST and TimeXer cross-attention with a Kirchhoff conservation regularizer and ReLoBRaLo dynamic loss balancing. Attains 3.55% demand MAPE on the six-BA EIA-930 protocol using a 168-hour context (30% shorter than the published 240-hour baseline) at ~0.6M parameters (3-10x leaner than comparators). Stage 2 (forecast-conditioned operational feasibility analysis on the BA-interchange network) and Stage 3 (learning a conditional grid-partition policy that minimizes allocation failures) are in development, targeting ICLR.",
+        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper published at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.55% demand MAPE across six US balancing authorities at ~0.6M parameters, 3-10x leaner than comparable models. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICLR.",
       technologies: [
         "Python",
         "Deep Learning",
