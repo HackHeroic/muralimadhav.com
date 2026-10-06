@@ -146,7 +146,7 @@ export const DATA = {
       venue:
         "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Published in IEEE Xplore",
       contributionNote:
-        "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filed",
+        "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filing in preparation",
     },
   ] as PublicationType[],
   achievements: [
