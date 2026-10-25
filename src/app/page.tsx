@@ -15,6 +15,7 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { Publications } from "@/components/sections/publications";
 import Image from "next/image";
+import { caveat } from "@/lib/fonts";
 
 const PROJECTS_TO_SHOW = 6;
 
@@ -29,7 +30,24 @@ export default function Page() {
       <Hero />
       <section id="about">
         <h2 className="text-xl font-bold w-min">About</h2>
-        <Markdown className="prose max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 text-pretty font-sans text-sm text-muted-foreground dark:prose-invert mt-2">
+        {/* Facts in Inter, asides as handwritten margin notes; the last line is the sign-off */}
+        <Markdown
+          className={`${caveat.variable} max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 mt-2 space-y-6 text-pretty font-sans text-[15px] sm:text-base leading-relaxed text-foreground [&>p:nth-of-type(odd)_em]:-rotate-[1.5deg] [&>p:nth-of-type(even)_em]:rotate-1 [&>p:last-child]:pt-2 [&>p:last-child]:font-[family-name:var(--font-hand)] [&>p:last-child]:font-bold [&>p:last-child]:text-[28px] sm:[&>p:last-child]:text-[30px] [&>p:last-child]:leading-none`}
+          components={{
+            strong: ({ children }) => (
+              <strong className="whitespace-nowrap font-medium underline decoration-wavy decoration-[1.5px] underline-offset-[5px] decoration-[var(--ink-color)]">
+                {children}
+              </strong>
+            ),
+            em: ({ children }) => (
+              <em
+                className="inline-block font-[family-name:var(--font-hand)] not-italic font-medium text-[22px] sm:text-2xl leading-none text-[var(--ink-color)]"
+              >
+                {children}
+              </em>
+            ),
+          }}
+        >
           {DATA.summary}
         </Markdown>
       </section>

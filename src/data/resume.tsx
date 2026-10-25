@@ -77,7 +77,7 @@ export const DATA = {
   tagline:
     "i build for systems that break expensively. power grids, warehouses, and jarvis, who judges my sleep schedule.",
   summary:
-    "fourth year cs & ai, rank 1 in my cohort. i mention this unprompted.\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. it refused. ieee published us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin up 60%. they raised a series a. i was, functionally, moving boxes around in a database.\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, then 8th. something is wrong with me :)\n\nanyway. scroll.",
+    "fourth year cs & ai, **rank 1** in my cohort. *← i mention this unprompted.*\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. *it refused.* **ieee** accepted us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin **up 60%**. they raised a series a. *i was, functionally, moving boxes around in a database.*\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, **then 8th**. *something is wrong with me :)*\n\nanyway. scroll ↓",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-singapore.jpeg",
   hackathons: [
@@ -144,7 +144,7 @@ export const DATA = {
         "S. Aggarwal",
       ],
       venue:
-        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Published in IEEE Xplore",
+        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Presented; to appear in IEEE Xplore",
       contributionNote:
         "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filing in preparation",
     },
@@ -469,7 +469,7 @@ export const DATA = {
       dates: "2025 - Present",
       active: true,
       description:
-        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper published at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.55% demand MAPE across six US balancing authorities at ~0.6M parameters, 3-10x leaner than comparable models. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICLR.",
+        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper accepted at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.55% demand MAPE across six US balancing authorities at ~0.6M parameters, 3-10x leaner than comparable models. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICLR.",
       technologies: [
         "Python",
         "Deep Learning",
