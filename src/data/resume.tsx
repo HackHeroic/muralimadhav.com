@@ -297,7 +297,7 @@ export const DATA = {
       end: "",
       description: (
         <>
-          Began contributing to Sanas&apos;s{" "}
+          Received an AI Engineer internship offer for Sanas&apos;s{" "}
           <span
             style={{
               fontWeight: "bold",
@@ -306,7 +306,7 @@ export const DATA = {
           >
             real-time speech AI platform
           </span>
-          , which transforms speakers&apos; accents in real time. May continue from October 2026, designing and building internal workflow automation across engineering and operations processes, reducing manual overhead and standardizing repeatable tasks.
+          , which transforms speakers&apos; accents in real time. Made early contributions to the platform in June 2026, and later declined an extended on-site role from October 2026 to present at IEEE APPEEC and compete at HackMIT.
         </>
       ),
     },
