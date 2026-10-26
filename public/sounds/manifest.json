@@ -1,0 +1,89 @@
+{
+ "credit": "Switch recordings from kbsim by Thomas Lai (https://github.com/tplai/kbsim), MIT License. See LICENSE-kbsim.txt.",
+ "switches": {
+  "holypanda": {
+   "press": {
+    "BACKSPACE": 1.9,
+    "ENTER": 3.1,
+    "GENERIC_R0": 4.0,
+    "GENERIC_R1": 3.9,
+    "GENERIC_R2": 4.1,
+    "GENERIC_R3": 3.9,
+    "GENERIC_R4": 5.3,
+    "SPACE": 4.5
+   },
+   "release": {
+    "BACKSPACE": 4.0,
+    "ENTER": 10.3,
+    "GENERIC": 15.4,
+    "SPACE": 8.1
+   }
+  },
+  "cream": {
+   "press": {
+    "BACKSPACE": -2.7,
+    "ENTER": 5.4,
+    "GENERIC_R0": 10.4,
+    "GENERIC_R1": 10.6,
+    "GENERIC_R2": 10.7,
+    "GENERIC_R3": 10.6,
+    "GENERIC_R4": 10.6,
+    "SPACE": 2.5
+   },
+   "release": {
+    "BACKSPACE": 5.7,
+    "ENTER": 18.0,
+    "GENERIC": 6.8,
+    "SPACE": 3.2
+   }
+  },
+  "topre": {
+   "press": {
+    "BACKSPACE": 14.3,
+    "ENTER": 9.5,
+    "GENERIC_R0": 18.0,
+    "GENERIC_R1": 18.0,
+    "GENERIC_R2": 18.0,
+    "GENERIC_R3": 18.0,
+    "GENERIC_R4": 18.0,
+    "SPACE": 4.1
+   },
+   "release": {
+    "BACKSPACE": 2.7,
+    "ENTER": 0.4,
+    "GENERIC": 8.3,
+    "SPACE": 4.1
+   }
+  },
+  "mxblue": {
+   "press": {
+    "GENERIC_R0": -1.0,
+    "GENERIC_R1": -0.9,
+    "GENERIC_R2": -0.8,
+    "GENERIC_R3": -0.8,
+    "GENERIC_R4": 0.2
+   },
+   "release": {
+    "GENERIC": 4.3
+   }
+  },
+  "buckling": {
+   "press": {
+    "BACKSPACE": 8.5,
+    "ENTER": 10.6,
+    "GENERIC_R0": 10.0,
+    "GENERIC_R1": 12.3,
+    "GENERIC_R2": 9.6,
+    "GENERIC_R3": 10.2,
+    "GENERIC_R4": 9.4,
+    "SPACE": 12.2
+   },
+   "release": {
+    "BACKSPACE": 10.1,
+    "ENTER": 7.9,
+    "GENERIC": 7.3,
+    "SPACE": 4.3
+   }
+  }
+ }
+}

@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import { Solway } from "next/font/google";
 import "./globals.css";
 import { BlueprintGrid } from "@/components/blueprint-grid";
+import { TerminalProvider } from "@/components/terminal/terminal-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const fontSans = FontSans({
@@ -100,8 +101,10 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="light">
           <TooltipProvider delayDuration={0}>
             <BlueprintGrid />
-            {children}
-            <Navbar />
+            <TerminalProvider>
+              {children}
+              <Navbar />
+            </TerminalProvider>
           </TooltipProvider>
         </ThemeProvider>
         <SpeedInsights />

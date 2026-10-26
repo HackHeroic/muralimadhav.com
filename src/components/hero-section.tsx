@@ -2,6 +2,7 @@ import { DATA } from "@/data/resume";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import Markdown from "react-markdown";
+import { TerminalButton } from "@/components/terminal/terminal-provider";
 
 export function HeroSection() {
   return (
@@ -30,23 +31,24 @@ export function HeroSection() {
             href={DATA.resumeUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-colors "
+            className="px-9 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,255,75,0.33)] hover:bg-[rgba(0,255,75,0.5)] transition-colors "
           >
             resume
           </Link>
           <Link
             href="#projects"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-colors "
+            className="px-9 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(2,0,255,0.33)] hover:bg-[rgba(2,0,255,0.5)] transition-colors "
             // className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(0,149,255,0.33)] hover:bg-[rgba(0,149,255,0.5)] transition-colors "
           >
             projects
           </Link>
           <Link
             href="#contact"
-            className="px-11 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors "
+            className="px-9 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,0,0,0.33)] hover:bg-[rgba(255,0,0,0.5)] transition-colors "
           >
             contact
           </Link>
+          <TerminalButton className="flex items-center gap-2 px-9 py-2.5 font-solway font-semibold text-sm sm:text-base text-foreground bg-[rgba(255,190,0,0.4)] hover:bg-[rgba(255,190,0,0.55)] transition-colors" />
         </div>
       </div>
     </section>

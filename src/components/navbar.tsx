@@ -11,11 +11,14 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import { SquareTerminal } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useTerminal } from "@/components/terminal/terminal-provider";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const terminal = useTerminal();
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
@@ -73,6 +76,26 @@ export default function Navbar() {
               </Tooltip>
             </DockIcon>
           ))}
+        <DockIcon className="hidden sm:flex">
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <button
+                type="button"
+                onClick={terminal.open}
+                aria-label="Open the terminal"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12",
+                )}
+              >
+                <SquareTerminal className="size-4" />
+              </button>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Terminal (press `)</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <Separator orientation="vertical" className="h-full py-2" />
         <DockIcon>
           <Tooltip>
