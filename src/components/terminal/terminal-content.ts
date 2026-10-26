@@ -74,6 +74,11 @@ export const BOOT: { cmd: string; out: Line[] }[] = [
 ];
 
 const PROJECTS: Record<string, { href: string; blurb: string; stat: string }> = {
+  bloombot: {
+    href: "https://bloombot.muralimadhav.com",
+    blurb: "grades exam questions by bloom level, then rewrites the paper to fit.",
+    stat: "+0.051 f1 over tf-idf + svm on sources it never saw. turns out \"explain\" means something different at every college.",
+  },
   sieve: {
     href: "https://github.com/HackHeroic/sieve",
     blurb: "pattern mining for noisy time series that doesn't fool itself.",
@@ -112,6 +117,7 @@ const ALIASES: Record<string, string> = {
   "watt-if": "kat-patchtst",
   paper: "kat-patchtst",
   files: "file_organizer",
+  bloom: "bloombot",
   "file-organizer": "file_organizer",
 };
 
@@ -161,7 +167,7 @@ const contact = (): Line[] => [
 ];
 
 export const COMPLETIONS = [
-  "help", "ls", "ls projects", "open sieve", "open kat-patchtst", "open snake_game_os", "open jarvis",
+  "help", "ls", "ls projects", "open bloombot", "open sieve", "open kat-patchtst", "open snake_game_os", "open jarvis",
   "open optiforge", "open file_organizer", "cat highlights.txt", "cat achievements.txt", "cat startup.json",
   "cat todo.txt", "resume", "contact", "sound on", "sound off", "clear", "history", "whoami", "credits",
   ...SWITCHES.map((s) => `switch ${s}`),

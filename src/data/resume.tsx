@@ -407,6 +407,35 @@ export const DATA = {
   ],
   projects: [
     {
+      title: "BloomBot",
+      href: "https://bloombot.muralimadhav.com",
+      dates: "October 2026",
+      active: true,
+      description:
+        "Labels every exam question with its Bloom's taxonomy level, then rewrites questions until the paper meets its blueprint. Tested on question sources it never trained on (9,855 questions from 7 sources), it beats the standard TF-IDF + SVM by +0.051 weighted F1 (p < 0.001). Colleges label the same verb differently (\"Explain\" is Remember in 55% of one set and Understand in 93% of another), so a college can teach it its own convention with a few labelled questions. A pipeline of agents plans, rewrites and verifies each question, all on a CPU.",
+      technologies: [
+        "Python",
+        "FastAPI",
+        "spaCy",
+        "scikit-learn",
+        "Qwen3-4B",
+        "Next.js",
+        "Cloudflare Pages",
+      ],
+      links: [
+        {
+          icon: <Globe className="size-4" />,
+          type: "Live demo",
+          href: "https://bloombot.muralimadhav.com",
+        },
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/bloombot",
+        },
+      ],
+    },
+    {
       title: "Unwrap",
       href: "https://hack-mit-26.vercel.app/",
       dates: "September 2026",
