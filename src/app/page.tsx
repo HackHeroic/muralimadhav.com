@@ -17,7 +17,7 @@ import { Publications } from "@/components/sections/publications";
 import Image from "next/image";
 import { caveat } from "@/lib/fonts";
 
-const PROJECTS_TO_SHOW = 6;
+const PROJECTS_TO_SHOW = 8;
 
 export default function Page() {
   const [showAllProjects, setShowAllProjects] = useState(false);
@@ -34,11 +34,17 @@ export default function Page() {
         <Markdown
           className={`${caveat.variable} max-w-full bg-[rgba(255,255,255,0.45)] dark:bg-[rgba(0,0,0,0.2)] py-3 mt-2 space-y-6 text-pretty font-sans text-[15px] sm:text-base leading-relaxed text-foreground [&>p:nth-of-type(odd)_em]:-rotate-[1.5deg] [&>p:nth-of-type(even)_em]:rotate-1 [&>p:last-child]:pt-2 [&>p:last-child]:font-[family-name:var(--font-hand)] [&>p:last-child]:font-bold [&>p:last-child]:text-[28px] sm:[&>p:last-child]:text-[30px] [&>p:last-child]:leading-none`}
           components={{
-            strong: ({ children }) => (
-              <strong className="whitespace-nowrap font-medium underline decoration-wavy decoration-[1.5px] underline-offset-[5px] decoration-[var(--ink-color)]">
-                {children}
-              </strong>
-            ),
+            strong: ({ children }) =>
+              // IEEE gets a highlighter mark and full bold on top of the wavy underline
+              children === "IEEE" ? (
+                <strong className="whitespace-nowrap rounded-[3px] bg-[rgba(255,190,0,0.45)] px-1 font-bold tracking-wide underline decoration-wavy decoration-[1.5px] underline-offset-[5px] decoration-[var(--ink-color)] dark:bg-[rgba(255,190,0,0.3)]">
+                  {children}
+                </strong>
+              ) : (
+                <strong className="whitespace-nowrap font-medium underline decoration-wavy decoration-[1.5px] underline-offset-[5px] decoration-[var(--ink-color)]">
+                  {children}
+                </strong>
+              ),
             em: ({ children }) => (
               <em
                 className="inline-block font-[family-name:var(--font-hand)] not-italic font-medium text-[22px] sm:text-2xl leading-none text-[var(--ink-color)]"
@@ -126,8 +132,9 @@ export default function Page() {
                 Check out my latest work
               </h2>
               <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                I&apos;ve worked on a variety of projects, from simple websites
-                to complex iOS applications. Here are a few of my favorites.
+                I&apos;ve worked on a variety of projects, from compilers and
+                CUDA kernels to research models and full-stack products. Here
+                are a few of my favorites.
               </p>
             </div>
           </div>

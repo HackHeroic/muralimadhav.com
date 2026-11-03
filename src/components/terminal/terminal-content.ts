@@ -33,7 +33,7 @@ const whoami = (): Line[] => [
 const highlights = (): Line[] => [
   line(seg("112x   ", C.green, true), seg("cuda kernels vs single-core numpy")),
   line(seg("2.50%  ", C.orange, true), seg("my grid forecast error. the grid's own: 3.51%")),
-  line(seg("ieee   ", C.blue, true), seg("first-author paper, appeec 2026, singapore")),
+  line(seg("IEEE   ", C.blue, true), seg("first-author paper, appeec 2026, singapore")),
   line(seg("#8     ", C.purple, true), seg("hackmit puzzle contest, worldwide. was 17th.")),
   line(seg("1st    ", C.green, true), seg("nst startup foundry 2026, with jarvis")),
 ];
@@ -43,13 +43,13 @@ const achievements = (): Line[] => {
   const head = (t: string) => text(`# ${t}`, C.purple);
   return [
     head("research"),
-    row("ieee appeec 2026", "first author, kat-patchtst, singapore"),
-    row("ieee pes shark tank", "3rd on the final leaderboard, top 5 pitch"),
+    row("IEEE APPEEC 2026", "first author, kat-patchtst, singapore"),
+    row("IEEE PES shark tank", "3rd on the final leaderboard, top 5 pitch"),
     head("contests"),
     row("hackmit puzzle", "8th worldwide in 2026, 17th in 2025"),
     row("hackmit 2025", "runner-up, voloridge challenge"),
     row("google big code 2026", "top 50 national finalist of 15,000"),
-    row("ieeextreme 18.0", "775th of 5,801 teams"),
+    row("IEEEXtreme 18.0", "775th of 5,801 teams"),
     row("jee advanced 2023", "air 5,649 of 180,372 (top 3.1%)"),
     head("startups"),
     row("yc startup school", "india 2026, ~2,500 picked of 25,000+"),
@@ -73,11 +73,25 @@ export const BOOT: { cmd: string; out: Line[] }[] = [
   { cmd: 'git commit -m "name the startup"', out: [text("nothing to commit, working tree clean", C.dim)] },
 ];
 
-const PROJECTS: Record<string, { href: string; blurb: string; stat: string }> = {
+const PROJECTS: Record<string, { href?: string; blurb: string; stat: string }> = {
+  "turtle-compiler": {
+    href: "https://turtle.muralimadhav.com",
+    blurb: "a compiler you can watch: all six phases run live as you type.",
+    stat: "lexer to bytecode vm in one js file, no dependencies. the turtle just draws.",
+  },
+  malaria: {
+    href: "https://github.com/amathziah/malaria-detection",
+    blurb: "does a 98% malaria detector still work on patients it has never seen?",
+    stat: "yes: 98.45% on 40 unseen patients. we wrote the test down before running it.",
+  },
   bloombot: {
     href: "https://bloombot.muralimadhav.com",
     blurb: "grades exam questions by bloom level, then rewrites the paper to fit.",
     stat: "+0.051 f1 over tf-idf + svm on sources it never saw. turns out \"explain\" means something different at every college.",
+  },
+  cucopula: {
+    blurb: "gpu copulas for tail-risk scenarios, tested like a risk desk would.",
+    stat: "covariance 25x faster on an h100. a 22-core cpu still wins the backtest day.",
   },
   sieve: {
     href: "https://github.com/HackHeroic/sieve",
@@ -118,6 +132,10 @@ const ALIASES: Record<string, string> = {
   paper: "kat-patchtst",
   files: "file_organizer",
   bloom: "bloombot",
+  turtle: "turtle-compiler",
+  compiler: "turtle-compiler",
+  "malaria-detection": "malaria",
+  copula: "cucopula",
   "file-organizer": "file_organizer",
 };
 
@@ -133,13 +151,10 @@ const openProject = (name: string): Line[] => {
   const k = projectKey(name);
   const p = PROJECTS[k];
   if (!p) return [text(`open: no such project: ${name || "(nothing)"}. try ls projects`, C.red)];
+  const out = [text(k, C.fg, true), text(p.blurb), text(p.stat, C.dim)];
+  if (!p.href) return [...out, text("private repo, for now.", C.dim)];
   const shown = p.href.replace(/^https?:\/\//, "");
-  return [
-    text(k, C.fg, true),
-    text(p.blurb),
-    text(p.stat, C.dim),
-    line(seg("→ ", C.dim), seg(shown.length > 52 ? `${shown.slice(0, 49)}...` : shown, C.blue, false, p.href)),
-  ];
+  return [...out, line(seg("→ ", C.dim), seg(shown.length > 52 ? `${shown.slice(0, 49)}...` : shown, C.blue, false, p.href))];
 };
 
 const help = (): Line[] =>
@@ -167,7 +182,7 @@ const contact = (): Line[] => [
 ];
 
 export const COMPLETIONS = [
-  "help", "ls", "ls projects", "open bloombot", "open sieve", "open kat-patchtst", "open snake_game_os", "open jarvis",
+  "help", "ls", "ls projects", "open turtle-compiler", "open malaria", "open bloombot", "open cucopula", "open sieve", "open kat-patchtst", "open snake_game_os", "open jarvis",
   "open optiforge", "open file_organizer", "cat highlights.txt", "cat achievements.txt", "cat startup.json",
   "cat todo.txt", "resume", "contact", "sound on", "sound off", "clear", "history", "whoami", "credits",
   ...SWITCHES.map((s) => `switch ${s}`),

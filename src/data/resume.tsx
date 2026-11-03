@@ -77,7 +77,7 @@ export const DATA = {
   tagline:
     "i build for systems that break expensively. power grids, warehouses, and jarvis, who judges my sleep schedule.",
   summary:
-    "fourth year cs & ai, **rank 1** in my cohort. *← i mention this unprompted.*\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. *it refused.* **ieee** accepted us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin **up 60%**. they raised a series a. *i was, functionally, moving boxes around in a database.*\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, **then 8th**. *something is wrong with me :)*\n\nanyway. scroll ↓",
+    "fourth year cs & ai, **rank 1** in my cohort. *← i mention this unprompted.*\n\ntaught a neural network that electricity has to obey kirchhoff’s laws. *it refused.* **IEEE** accepted us anyway.\n\nfounding engineer at a dubai startup in my second year. contribution margin **up 60%**. they raised a series a. *i was, functionally, moving boxes around in a database.*\n\nspent three weeks on a puzzle contest to get into a hackathon. did it again the next year. 17th in the world, **then 8th**. *something is wrong with me :)*\n\nanyway. scroll ↓",
   // avatarUrl: "/professional.webp",
   avatarUrl: "/madhav-singapore.jpeg",
   hackathons: [
@@ -135,7 +135,7 @@ export const DATA = {
     {
       title:
         "KAT-PatchTST: Physics-Informed Forecasting with Kirchhoff Conservation",
-      href: "",
+      href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
       authors: [
         "C. Murali Madhav",
         "R. Yadav",
@@ -146,7 +146,14 @@ export const DATA = {
       venue:
         "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Presented; to appear in IEEE Xplore",
       contributionNote:
-        "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICLR) · Provisional patent filing in preparation",
+        "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICML) · Provisional patent filing in preparation",
+      links: [
+        {
+          icon: <FileText className="size-3 md:size-4" />,
+          title: "Read the paper",
+          href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
+        },
+      ],
     },
   ] as PublicationType[],
   achievements: [
@@ -186,7 +193,7 @@ export const DATA = {
       title: "Google Big Code Challenge — National Top 50",
       issuer: "Google",
       date: "2026",
-      description: "48-hour Challenge Finale · awarded a Google Pixel",
+      description: "Invited to the 48-hour Challenge Finale · awarded a Google Pixel",
     },
     {
       title: "Berkeley Global Access Program",
@@ -275,7 +282,8 @@ export const DATA = {
         name: "Twitter",
         url: "https://twitter.com",
         icon: Icons.x,
-        navbar: true,
+        // No X account yet: the dock icon linked to twitter.com's home page
+        navbar: false,
       },
       email: {
         name: "Send Email",
@@ -374,7 +382,7 @@ export const DATA = {
       href: "https://www.zotahealthcare.com/",
       badges: [],
       location: "Remote",
-      title: "Front-End Developer-Intern",
+      title: "Front-End Developer – Intern",
       logoUrl: "/Zota-logo.jpeg",
       start: "June 2024",
       end: "August 2024",
@@ -391,7 +399,7 @@ export const DATA = {
   ],
   education: [
     {
-      school: "Newton School Of Technology, Rishihood University",
+      school: "Newton School of Technology, Rishihood University",
       href: "",
       degree: (
         <>
@@ -406,6 +414,57 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Turtle Compiler",
+      href: "https://turtle.muralimadhav.com",
+      dates: "November 2026",
+      active: true,
+      description:
+        "A compiler you can watch work. Type a turtle-graphics program and all six phases run live in the browser, from tokens and an LL(1) parse trace to three-address code, six optimization rules and bytecode for a small VM that draws the picture. After optimizing, it runs both versions on the VM to confirm the picture is unchanged. Built with a team of five for the Compiler Design and Automata course.",
+      technologies: [
+        "JavaScript",
+        "Compilers",
+        "LL(1) Parsing",
+        "Bytecode VM",
+        "Next.js",
+        "Cloudflare Pages",
+      ],
+      links: [
+        {
+          icon: <Globe className="size-4" />,
+          type: "Live demo",
+          href: "https://turtle.muralimadhav.com",
+        },
+      ],
+    },
+    {
+      title: "Malaria Cell Detection",
+      href: "https://github.com/amathziah/malaria-detection",
+      dates: "October - November 2026",
+      active: true,
+      description:
+        "Does a 98%-accurate malaria detector still work on patients it has never seen? We rebuilt a published EfficientNet-B0 ensemble from its authors' own code, matched it within 1 pp on every headline metric and found two errors in the paper. Then, in a pre-registered test, the ensemble scored 98.45% on 40 unseen patients. Written up as an 8-page IEEE-format paper. Team of four; I built the reproduction pipeline and ran the GPU training.",
+      technologies: [
+        "Python",
+        "TensorFlow",
+        "EfficientNet",
+        "Computer Vision",
+        "Medical Imaging",
+        "RunPod",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/amathziah/malaria-detection",
+        },
+        {
+          icon: <FileText className="size-4" />,
+          type: "Paper",
+          href: "https://github.com/amathziah/malaria-detection/raw/main/Malaria_IEEE_Paper.pdf",
+        },
+      ],
+    },
     {
       title: "BloomBot",
       href: "https://bloombot.muralimadhav.com",
@@ -432,6 +491,45 @@ export const DATA = {
           icon: <Icons.github className="size-4" />,
           type: "GitHub",
           href: "https://github.com/HackHeroic/bloombot",
+        },
+      ],
+    },
+    {
+      title: "cuCopula",
+      href: "",
+      dates: "October 2026",
+      active: true,
+      description:
+        "A GPU engine for tail-risk scenarios: an independent reimplementation of a parallel copula method, extended with the tests a risk desk would ask for. On an H100, covariance runs 25x faster end to end than a 22-thread CPU, and sampling 18x. A pre-registered 99% VaR backtest on 50 large US stocks (2015 to 2025) showed that volatility filtering matters far more than the choice of copula.",
+      technologies: [
+        "Python",
+        "CUDA",
+        "CuPy",
+        "Copulas",
+        "Risk Modeling",
+        "NVIDIA H100",
+      ],
+    },
+    {
+      title: "SIEVE",
+      href: "https://github.com/HackHeroic/sieve",
+      dates: "September - October 2026",
+      active: true,
+      description:
+        "Pattern mining that stays honest on autocorrelated time series. It tests tens of thousands of if-then rules and keeps only those that survive a block-permutation correction. On data with no signal, it raises a false alarm 4% of the time; the standard row-shuffle correction, 100%. Given 36 years of VIX, it rediscovered volatility clustering on its own. Custom CUDA kernels run 112x faster end to end than single-core NumPy. Started solo at HackMIT 2026.",
+      technologies: [
+        "Python",
+        "CUDA",
+        "CuPy",
+        "Numba",
+        "Statistics",
+        "Time Series",
+      ],
+      links: [
+        {
+          icon: <Icons.github className="size-4" />,
+          type: "GitHub",
+          href: "https://github.com/HackHeroic/sieve",
         },
       ],
     },
@@ -494,11 +592,11 @@ export const DATA = {
     },
     {
       title: "Watt-IF",
-      href: "",
+      href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
       dates: "2025 - Present",
       active: true,
       description:
-        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper accepted at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.55% demand MAPE across six US balancing authorities at ~0.6M parameters, 3-10x leaner than comparable models. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICLR.",
+        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper presented at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.65% demand MAPE across six US balancing authorities, within 0.78 pp of the best weather-integrated baseline. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICML.",
       technologies: [
         "Python",
         "Deep Learning",
@@ -506,6 +604,13 @@ export const DATA = {
         "TimeXer",
         "Physics-Informed ML",
         "Time-Series Forecasting",
+      ],
+      links: [
+        {
+          icon: <FileText className="size-4" />,
+          type: "Paper",
+          href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
+        },
       ],
     },
     {
