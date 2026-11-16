@@ -135,7 +135,7 @@ export const DATA = {
     {
       title:
         "KAT-PatchTST: Physics-Informed Forecasting with Kirchhoff Conservation",
-      href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
+      href: "https://ieeexplore.ieee.org/document/11749997",
       authors: [
         "C. Murali Madhav",
         "R. Yadav",
@@ -144,10 +144,15 @@ export const DATA = {
         "S. Aggarwal",
       ],
       venue:
-        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Presented; to appear in IEEE Xplore",
+        "18th Asia-Pacific Power and Energy Engineering Conference (APPEEC), IEEE · Singapore, August 2026 · Published in IEEE Xplore, pp. 107–112",
       contributionNote:
         "First author · Stage 1 of the Watt-IF research project (Stages 2 & 3 in development, targeting ICML) · Provisional patent filing in preparation",
       links: [
+        {
+          icon: <Globe className="size-3 md:size-4" />,
+          title: "IEEE Xplore",
+          href: "https://ieeexplore.ieee.org/document/11749997",
+        },
         {
           icon: <FileText className="size-3 md:size-4" />,
           title: "Read the paper",
@@ -596,7 +601,7 @@ export const DATA = {
       dates: "2025 - Present",
       active: true,
       description:
-        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper presented at IEEE APPEEC 2026: PatchTST with a Kirchhoff conservation regularizer reaches 3.65% demand MAPE across six US balancing authorities, within 0.78 pp of the best weather-integrated baseline. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICML.",
+        "Physics-informed forecasting for power grids. Stage 1, KAT-PatchTST, is my first-author paper at IEEE APPEEC 2026, published in IEEE Xplore: PatchTST with a Kirchhoff conservation regularizer reaches 3.65% demand MAPE across six US balancing authorities, within 0.78 pp of the best weather-integrated baseline. Stages 2 and 3 (grid bottleneck analysis and a grid-partition policy) are in development, targeting ICML.",
       technologies: [
         "Python",
         "Deep Learning",
@@ -610,6 +615,11 @@ export const DATA = {
           icon: <FileText className="size-4" />,
           type: "Paper",
           href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
+        },
+        {
+          icon: <Globe className="size-4" />,
+          type: "IEEE Xplore",
+          href: "https://ieeexplore.ieee.org/document/11749997",
         },
       ],
     },

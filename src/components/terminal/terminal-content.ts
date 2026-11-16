@@ -33,7 +33,7 @@ const whoami = (): Line[] => [
 const highlights = (): Line[] => [
   line(seg("112x   ", C.green, true), seg("cuda kernels vs single-core numpy")),
   line(seg("2.50%  ", C.orange, true), seg("my grid forecast error. the grid's own: 3.51%")),
-  line(seg("IEEE   ", C.blue, true), seg("first-author paper, appeec 2026, singapore")),
+  line(seg("IEEE   ", C.blue, true), seg("first-author paper, appeec 2026, in ieee xplore")),
   line(seg("#8     ", C.purple, true), seg("hackmit puzzle contest, worldwide. was 17th.")),
   line(seg("1st    ", C.green, true), seg("nst startup foundry 2026, with jarvis")),
 ];
@@ -99,9 +99,9 @@ const PROJECTS: Record<string, { href?: string; blurb: string; stat: string }> =
     stat: "4% false alarms on pure noise; the standard method: 100%. kernels 112x faster than numpy.",
   },
   "kat-patchtst": {
-    href: "https://drive.google.com/file/d/11kkBXDHZNQpR5bB-Vir0e4JbweyfZ98j/view?usp=drive_link",
+    href: "https://ieeexplore.ieee.org/document/11749997",
     blurb: "power-grid forecasting that gets penalized for inventing electricity.",
-    stat: "first author, ieee appeec 2026. the follow-up beats grid operators' own forecasts: 2.50% vs 3.51%.",
+    stat: "first author, ieee appeec 2026, in ieee xplore. the follow-up beats grid operators' own forecasts: 2.50% vs 3.51%.",
   },
   snake_game_os: {
     href: "https://github.com/HackHeroic/Snake_game_os",
