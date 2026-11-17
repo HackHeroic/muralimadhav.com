@@ -505,7 +505,7 @@ export const DATA = {
       dates: "October 2026",
       active: true,
       description:
-        "A GPU engine for tail-risk scenarios: an independent reimplementation of a parallel copula method, extended with the tests a risk desk would ask for. On an H100, covariance runs 25x faster end to end than a 22-thread CPU, and sampling 18x. A pre-registered 99% VaR backtest on 50 large US stocks (2015 to 2025) showed that volatility filtering matters far more than the choice of copula.",
+        "A GPU engine for tail-risk scenarios: numerically stable CUDA kernels for a parallel copula method, with the tests a risk desk would ask for. On an H100, covariance runs 25x faster end to end than a 22-thread CPU, and sampling 18x. A pre-registered 99% VaR backtest on 50 large US stocks (2015 to 2025) showed that volatility filtering matters far more than the choice of copula.",
       technologies: [
         "Python",
         "CUDA",
